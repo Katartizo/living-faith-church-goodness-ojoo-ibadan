@@ -18,7 +18,19 @@
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="manifest" href="site.webmanifest">
-
+    
+    <style>
+        /* 3D Coin Flip Animation */
+        @keyframes flip3d {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        
+        .spinning-logo {
+            animation: flip3d 3s linear infinite; /* Flips once every 5 seconds */
+        }
+    </style>
+    
 </head>
 
 <body id="top">
@@ -36,7 +48,8 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -5px; border-radius: 5px;">
+                <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
+   margin-left: -15px; border-radius: 50%;">
             </a>
         </div>
 
@@ -298,7 +311,8 @@
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                       <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -5px; border-radius: 5px;">
+                       <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
+   margin-left: -15px; border-radius: 50%;">
                     </a>
                 </div> 
                 <p>
