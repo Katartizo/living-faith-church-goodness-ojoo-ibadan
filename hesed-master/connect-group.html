@@ -45,7 +45,7 @@
         <li><a href="index.html" title="Home">Home</a></li>
         <li><a href="about.html" title="About">About</a></li>
         <li><a href="events.html" title="Services">Events</a></li>
-        <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
+        <li class="current"><a href="connect-group.html" title="WSF Centers">WSF</a></li>
         <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
         <li><a href="contact.html" title="Contact us">Contact</a></li>
     </ul>
@@ -53,7 +53,9 @@
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-    </header> <section class="page-header page-header--connect">
+    </header> 
+    
+    <section class="page-header page-header--connect">
 
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
@@ -62,7 +64,9 @@
             </div>
         </div>
 
-    </section> <section class="page-content">
+    </section> 
+    
+    <section class="page-content">
 
         <div class="row">
             <div class="column">
@@ -83,23 +87,23 @@
                 Kindly fill out the form below to help us understand your location, and our team will connect you to the WSF center closest to your home.
                 </p>
 
-                <form name="connectForm" id="connectForm" class="connectForm" method="post" action="https://formspree.io/f/mgopjdnv" autocomplete="off">
+                <form name="connectForm" id="connectForm" class="connectForm" method="POST" action="https://formspree.io/f/mgopjdnv" autocomplete="off">
                     <fieldset>
 
                         <div class="form-field">
-                            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Full Name" value="" type="text">
+                            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Full Name" value="" type="text" required>
                         </div>
 
                         <div class="form-field">
-                            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email Address" value="" type="email">
+                            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email Address" value="" type="email" required>
                         </div>
 
                         <div class="form-field">
-                            <input name="cPhone" id="cPhone" class="h-full-width h-remove-bottom" placeholder="Mobile Number" value="" type="tel">
+                            <input name="cPhone" id="cPhone" class="h-full-width h-remove-bottom" placeholder="Mobile Number" value="" type="tel" required>
                         </div>
 
                         <div class="form-field">
-                            <input name="cAddress" id="cAddress" class="h-full-width h-remove-bottom" placeholder="Your Home Address / Area in Ojoo" value="" type="text">
+                            <input name="cAddress" id="cAddress" class="h-full-width h-remove-bottom" placeholder="Your Home Address / Area in Ojoo" value="" type="text" required>
                         </div>
 
                         <div class="form-field">
@@ -114,11 +118,45 @@
 
                         <input name="submit" id="submit" class="btn btn--primary btn--large h-full-width" value="Find A Center" type="submit">
 
-                    </fieldset><input type="hidden" name="_next" value="https://living-faith-church-goodness-ojoo-i.vercel.app/connect-group.html">
-                </form> </div>
+                    </fieldset>
+                </form> 
+                
+                <div id="form-status" style="display: none; padding: 15px; margin-top: 15px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center; font-weight: bold;">
+                    Thank you! Your message has been sent successfully.
+                </div>
+
+                <script>
+                    var form = document.getElementById("connectForm");
+                    var statusMsg = document.getElementById("form-status");
+                    
+                    form.addEventListener("submit", function(event) {
+                        event.preventDefault(); // Stops the page from leaving
+                        var data = new FormData(form);
+                        
+                        fetch(form.action, {
+                            method: form.method,
+                            body: data,
+                            headers: { 'Accept': 'application/json' }
+                        }).then(response => {
+                            if (response.ok) {
+                                statusMsg.style.display = "block"; // Shows the success message
+                                form.reset(); // Clears out the text boxes
+                            } else {
+                                statusMsg.innerHTML = "Oops! There was a problem sending your message.";
+                                statusMsg.style.backgroundColor = "#f8d7da";
+                                statusMsg.style.color = "#721c24";
+                                statusMsg.style.display = "block";
+                            }
+                        });
+                    });
+                </script>
+                
+            </div>
         </div>
 
-    </section> <section class="s-social">
+    </section> 
+    
+    <section class="s-social">
             
         <div class="row social-content">
             <div class="column">
@@ -149,7 +187,10 @@
                     </li>
                 </ul>
             </div>
-        </div> </section> <footer class="s-footer">
+        </div> 
+    </section> 
+    
+    <footer class="s-footer">
 
         <div class="row footer-top">
             <div class="column large-4 medium-5 tab-full">
@@ -188,16 +229,23 @@
                     </div>
                 </div>
             </div>
-        </div> <div class="row footer-bottom">
+        </div> 
+        
+        <div class="row footer-bottom">
             <div class="column ss-copyright">
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
                 <span>Designed by <a href="https://victor-portfolio-weld.vercel.app/">Victor</a></span>
             </div>
-        </div> <div class="ss-go-top">
+        </div> 
+        
+        <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
-        </div> </footer> <script src="js/jquery-3.2.1.min.js"></script>
+        </div> 
+    </footer> 
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
