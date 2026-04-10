@@ -100,32 +100,32 @@
 
                 <h2>Get In Touch.</h2>
 
-                <form name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
-                    <fieldset>
-                        <input type="hidden" name="_next" value="https://living-faith-church-goodness-ojoo-i.vercel.app/contact.html">
-
-                        <div class="form-field">
-                            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Name" value="" type="text">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email" value="" type="text">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cWebsite" id="cWebsite" class="h-full-width h-remove-bottom" placeholder="Phone Number (Optional)" value="" type="text">
-                        </div>
-
-                        <div class="message form-field">
-                            <textarea name="cMessage" id="cMessage" class="h-full-width h-remove-bottom" placeholder="Your Message or Prayer Request"></textarea>
-                        </div>
-
-                        <br>
-
-                        <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Send Message" type="submit">
-
-                    </fieldset>
-                </form>
+                <form name="contactForm" id="contactForm" method="POST" action="https://formspree.io/f/mgopjdnv" autocomplete="off">
+    <fieldset>
+        <input type="hidden" name="_next" value="https://living-faith-church-goodness-ojoo-i.vercel.app/contact.html">
+        
+        <div class="form-field">
+            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Name" value="" type="text" required>
+        </div>
+        
+        <div class="form-field">
+            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email" value="" type="email" required>
+        </div>
+        
+        <div class="form-field">
+            <input name="cPhone" id="cPhone" class="h-full-width h-remove-bottom" placeholder="Phone Number (Optional)" value="" type="tel">
+        </div>
+        
+        <div class="message form-field">
+            <textarea name="cMessage" id="cMessage" class="h-full-width h-remove-bottom" placeholder="Your Message or Prayer Request" required></textarea>
+        </div>
+        
+        <br>
+        
+        <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Send Message" type="submit">
+        
+    </fieldset>
+</form>
 
             </div>
         </div>
