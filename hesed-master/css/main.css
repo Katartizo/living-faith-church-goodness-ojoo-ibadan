@@ -3556,16 +3556,20 @@ html.no-csstransitions .hero-content {
   }
 
   .church-staff__picture {
-    -webkit-flex: 0 0 6.4rem;
-    -ms-flex: 0 0 6.4rem;
-    flex: 0 0 6.4rem;
-    max-width: 6.4rem;
-  }
+  -webkit-flex: 0 0 8rem;
+  -ms-flex: 0 0 8rem;
+  flex: 0 0 8rem;
+  max-width: 8rem;
+  margin-right: 2rem;
+}
 
-  .church-staff__picture img {
-    width: 6.4rem;
-    height: 6.4rem;
-  }
+.church-staff__picture img {
+  width: 9rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;         /* This is the magic trick that stops squishing! */
+  object-position: top center; /* Focuses on the face */
+}
 
   .event-thumb {
     padding: 1.6rem;
