@@ -14,9 +14,7 @@
 
     <script src="js/modernizr.js"></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg?v=2">
     <link rel="manifest" href="site.webmanifest">
     
     <style>
@@ -27,11 +25,86 @@
         }
         
         .spinning-logo {
-            animation: flip3d 3s linear infinite; /* Flips once every 5 seconds */
+            animation: flip3d 5s linear infinite; 
+        }
+
+        /* --- NEW: Committee Scrolling Marquee Styles --- */
+        .s-committee {
+            padding: 6rem 0 4rem 0;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        
+        .committee-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .scrolling-wrapper {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 1rem 0 2rem 0;
+        }
+
+        .scrolling-track {
+            display: inline-flex;
+            /* 25s controls the speed. Make it higher (e.g., 30s) to slow it down */
+            animation: scrollTrack 25s linear infinite; 
+        }
+
+        /* Pauses the scroll when the user hovers over it */
+        .scrolling-track:hover {
+            animation-play-state: paused;
+        }
+
+        .committee-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 260px;
+            margin: 0 15px;
+            padding: 25px 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            text-align: center;
+            white-space: normal; /* Allows text to wrap inside the box */
+            transition: transform 0.3s ease;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-5px); /* Tiny lift effect on hover */
+        }
+
+        .committee-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #cc0000; /* Winners Red border around pictures */
+        }
+
+        .committee-card h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+
+        .committee-card span {
+            color: #cc0000;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        @keyframes scrollTrack {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } 
         }
     </style>
     
-
 </head>
 
 <body id="top">
@@ -49,25 +122,26 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-             <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
-   margin-left: -15px; border-radius: 50%;">
+             <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
             </a>
         </div>
 
-<nav class="header-nav-wrap">
-    <ul class="header-nav">
-        <li><a href="index.html" title="Home">Home</a></li>
-        <li><a href="about.html" title="About">About</a></li>
-        <li><a href="events.html" title="Services">Events</a></li>
-        <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
-        <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
-        <li><a href="contact.html" title="Contact us">Contact</a></li>
-    </ul>
-</nav>
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li class="current"><a href="about.html" title="About">About</a></li>
+                <li><a href="events.html" title="Services">Events</a></li>
+                <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
+                <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
+                <li><a href="contact.html" title="Contact us">Contact</a></li>
+            </ul>
+        </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-    </header> <section class="page-header page-header--about">
+    </header> 
+    
+    <section class="page-header page-header--about">
 
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
@@ -76,7 +150,9 @@
             </div>
         </div>
 
-    </section> <section class="page-content">
+    </section> 
+    
+    <section class="page-content">
 
         <div class="row">
             <div class="column">
@@ -262,10 +338,92 @@
                         </p>
                     </div>
 
-                </div> </div>
+                </div> 
+                
+            </div>
         </div>
 
-    </section> <section class="s-social">
+    </section> 
+
+    <section class="s-committee">
+        <div class="row">
+            <div class="column large-full">
+                <h2 class="committee-title">
+                    Church Committee Members
+                    <span style="font-size: 0.6em; color: #cc0000; margin-left: 10px; vertical-align: middle; opacity: 0.7;">
+                        &larr; &rarr;
+                    </span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="scrolling-wrapper">
+            <div class="scrolling-track">
+                
+                <div class="committee-card">
+                    <img src="images/avatars/user-05.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Committee Chairman</span>
+                </div>
+                
+                <div class="committee-card">
+                    <img src="images/avatars/user-01.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Financial Secretary</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-02.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Welfare Director</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-03.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Technical Head</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-04.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Choir Director</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-05.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Committee Chairman</span>
+                </div>
+                
+                <div class="committee-card">
+                    <img src="images/avatars/user-01.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Financial Secretary</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-02.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Welfare Director</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-03.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Technical Head</span>
+                </div>
+
+                <div class="committee-card">
+                    <img src="images/avatars/user-04.jpg" alt="Committee Member">
+                    <h4>Firstname Lastname</h4>
+                    <span>Choir Director</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="s-social">
             
         <div class="row social-content">
             <div class="column">
@@ -296,16 +454,19 @@
                     </li>
                 </ul>
             </div>
-        </div> </section> <footer class="s-footer">
+        </div> 
+    </section> 
+    
+    <footer class="s-footer">
 
         <div class="row footer-top">
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                        <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
-   margin-left: -15px; border-radius: 50%;">
+                        <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
                     </a>
-                </div>  <p>
+                </div>  
+                <p>
                 Living Faith Church Worldwide (Winners' Chapel International). A place of empowerment, liberation, and triumph. Join us and experience the transforming power of the Word of Faith. 
                 </p>
             </div>
@@ -337,16 +498,23 @@
                     </div>
                 </div>
             </div>
-        </div> <div class="row footer-bottom">
+        </div> 
+        
+        <div class="row footer-bottom">
             <div class="column ss-copyright">
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
                 <span>Designed by <a href="https://victor-portfolio-weld.vercel.app/">Victor</a></span>
             </div>
-        </div> <div class="ss-go-top">
+        </div> 
+        
+        <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
-        </div> </footer> <script src="js/jquery-3.2.1.min.js"></script>
+        </div> 
+    </footer> 
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
