@@ -15,9 +15,7 @@
 
     <script src="js/modernizr.js"></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg?v=2">
     <link rel="manifest" href="site.webmanifest">
     
     <style>
@@ -29,6 +27,17 @@
         
         .spinning-logo {
             animation: flip3d 5s linear infinite; /* Flips once every 5 seconds */
+        }
+        
+        /* Making the contact links look nice */
+        .contact-link {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .contact-link:hover {
+            color: #000000;
         }
     </style>
     
@@ -49,25 +58,26 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                                <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
-   margin-left: -15px; border-radius: 50%;">
+                <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
             </a>
         </div>
 
-       <nav class="header-nav-wrap">
-    <ul class="header-nav">
-        <li><a href="index.html" title="Home">Home</a></li>
-        <li><a href="about.html" title="About">About</a></li>
-        <li><a href="events.html" title="Services">Events</a></li>
-        <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
-        <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
-        <li><a href="contact.html" title="Contact us">Contact</a></li>
-    </ul>
-</nav>
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="about.html" title="About">About</a></li>
+                <li><a href="events.html" title="Services">Events</a></li>
+                <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
+                <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
+                <li class="current"><a href="contact.html" title="Contact us">Contact</a></li>
+            </ul>
+        </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-    </header> <section class="page-header page-header--contact">
+    </header> 
+    
+    <section class="page-header page-header--contact">
 
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
@@ -76,7 +86,9 @@
             </div>
         </div>
 
-    </section> <section class="page-content">
+    </section> 
+    
+    <section class="page-content">
 
         <div class="row">
             <div class="column">
@@ -103,9 +115,13 @@
                     <div class="column large-6 tab-full">
                         <h3>Contact Info.</h3>
                         <p>
-                        info@lfcgoodnessojoo.org<br>
-                        counseling@lfcgoodnessojoo.org <br>
-                        Phone: +234 9037835334
+                        <strong>Email Us:</strong><br>
+                        📧 <a href="mailto:lfcgoodness@gmail.com" class="contact-link">lfcgoodness@gmail.com</a><br>
+                        📧 <a href="mailto:testimonieslfcgoodness@gmail.com" class="contact-link">testimonieslfcgoodness@gmail.com</a> <br><br>
+                        
+                        <strong>Call Us:</strong><br>
+                        📞 <a href="tel:+2348107515732" class="contact-link">+234 810 751 5732</a><br>
+                        📞 <a href="tel:+2348037395111" class="contact-link">+234 803 739 5111</a>
                         </p>
                     </div>
                 </div>
@@ -114,67 +130,67 @@
                 <h2>Get In Touch.</h2>
 
                 <form name="contactForm" id="contactForm" method="POST" action="https://formspree.io/f/mgopjdnv" autocomplete="off">
-    <fieldset>
-        
-        <div class="form-field">
-            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Name" value="" type="text" required>
-        </div>
-        
-        <div class="form-field">
-            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email" value="" type="email" required>
-        </div>
-        
-        <div class="form-field">
-            <input name="cPhone" id="cPhone" class="h-full-width h-remove-bottom" placeholder="Phone Number (Optional)" value="" type="tel">
-        </div>
-        
-        <div class="message form-field">
-            <textarea name="cMessage" id="cMessage" class="h-full-width h-remove-bottom" placeholder="Your Message or Prayer Request" required></textarea>
-        </div>
-        
-        <br>
-        
-        <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Send Message" type="submit">
-        
-    </fieldset>
-</form>
-<div id="form-status" style="display: none; padding: 15px; margin-top: 15px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center; font-weight: bold;">
-    Thank you! Your message has been sent successfully.
-</div>
+                    <fieldset>
+                        
+                        <div class="form-field">
+                            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Name" value="" type="text" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email" value="" type="email" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <input name="cPhone" id="cPhone" class="h-full-width h-remove-bottom" placeholder="Phone Number (Optional)" value="" type="tel">
+                        </div>
+                        
+                        <div class="message form-field">
+                            <textarea name="cMessage" id="cMessage" class="h-full-width h-remove-bottom" placeholder="Your Message or Prayer Request" required></textarea>
+                        </div>
+                        
+                        <br>
+                        
+                        <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Send Message" type="submit">
+                        
+                    </fieldset>
+                </form>
+                
+                <div id="form-status" style="display: none; padding: 15px; margin-top: 15px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center; font-weight: bold;">
+                    Thank you! Your message has been sent successfully.
+                </div>
 
-<script>
-    var form = document.getElementById("contactForm");
-    var statusMsg = document.getElementById("form-status");
-    
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Stops the page from leaving
-        var data = new FormData(form);
-        
-        fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                statusMsg.style.display = "block"; // Shows the success message
-                form.reset(); // Clears out the text boxes
-            } else {
-                statusMsg.innerHTML = "Oops! There was a problem sending your message.";
-                statusMsg.style.backgroundColor = "#f8d7da";
-                statusMsg.style.color = "#721c24";
-                statusMsg.style.display = "block";
-            }
-        });
-    });
-</script>
-
-
-
+                <script>
+                    var form = document.getElementById("contactForm");
+                    var statusMsg = document.getElementById("form-status");
+                    
+                    form.addEventListener("submit", function(event) {
+                        event.preventDefault(); // Stops the page from leaving
+                        var data = new FormData(form);
+                        
+                        fetch(form.action, {
+                            method: form.method,
+                            body: data,
+                            headers: { 'Accept': 'application/json' }
+                        }).then(response => {
+                            if (response.ok) {
+                                statusMsg.style.display = "block"; // Shows the success message
+                                form.reset(); // Clears out the text boxes
+                            } else {
+                                statusMsg.innerHTML = "Oops! There was a problem sending your message.";
+                                statusMsg.style.backgroundColor = "#f8d7da";
+                                statusMsg.style.color = "#721c24";
+                                statusMsg.style.display = "block";
+                            }
+                        });
+                    });
+                </script>
 
             </div>
         </div>
 
-    </section> <section class="s-social">
+    </section> 
+    
+    <section class="s-social">
             
         <div class="row social-content">
             <div class="column">
@@ -205,16 +221,19 @@
                     </li>
                 </ul>
             </div>
-        </div> </section> <footer class="s-footer">
+        </div> 
+    </section> 
+    
+    <footer class="s-footer">
 
         <div class="row footer-top">
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                                       <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
-   margin-left: -15px; border-radius: 50%;">
+                        <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
                     </a>
-                </div>  <p>
+                </div>  
+                <p>
                 Living Faith Church Worldwide (Winners' Chapel International). A place of empowerment, liberation, and triumph. Join us and experience the transforming power of the Word of Faith.
                 </p>
             </div>
@@ -222,12 +241,12 @@
                 <div class="row">
                     <div class="column large-7 medium-full">
                         <h4 class="h6">Our Location</h4>
-                     <p>
-    Living Faith Church Goodness,<br>
-    Opp Olorun Kole House, Lane 3,<br>
-    Area 4, Goodness Estate, Ojoo,<br>
-    Ibadan, Oyo State, Nigeria.
-</p>
+                        <p>
+                            Living Faith Church Goodness,<br>
+                            Opp Olorun Kole House, Lane 3,<br>
+                            Area 4, Goodness Estate, Ojoo,<br>
+                            Ibadan, Oyo State, Nigeria.
+                        </p>
         
                         <p>
                         <a href="https://maps.app.goo.gl/SP7xRj5BcpEdWYUPA" target="_blank" class="btn btn--footer">Get Direction</a>
@@ -246,16 +265,23 @@
                     </div>
                 </div>
             </div>
-        </div> <div class="row footer-bottom">
+        </div> 
+        
+        <div class="row footer-bottom">
             <div class="column ss-copyright">
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
                 <span>Designed by <a href="https://victor-portfolio-weld.vercel.app/">Victor</a></span>
             </div>
-        </div> <div class="ss-go-top">
+        </div> 
+        
+        <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
-        </div> </footer> <script src="js/jquery-3.2.1.min.js"></script>
+        </div> 
+    </footer> 
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
