@@ -87,6 +87,15 @@
             border: 3px solid #cc0000; /* Winners Red border around pictures */
         }
 
+        /* SPECIAL RULE FOR GROUP PHOTOS */
+        .committee-card.group-card img {
+            width: 240px; /* Made even wider to fit everyone */
+            height: 140px; /* Made taller to fit faces properly */
+            border-radius: 8px; /* Smooth rounded corners instead of a circle */
+            object-fit: cover;
+            object-position: top center; /* Shifts focus up to the faces! */
+        }
+
         .committee-card h4 {
             margin: 0 0 5px 0;
             font-size: 1.8rem;
@@ -368,11 +377,11 @@
                 
                 <div class="committee-card">
                     <img src="images/avatars/IMG_20260413_094621.jpg" alt="Committee Member">
-                    <h4>Dr. Dns. Olukemi Esther Adeoye</h4>
+                    <h4>Dns. Dr. Olukemi Esther Adeoye</h4>
                     <span>Deaconess</span>
                 </div>
 
-                <div class="committee-card">
+                <div class="committee-card group-card">
                     <img src="images/avatars/IMG_20260413_112527.jpg" alt="Committee Member">
                     <h4>Youth Alive</h4>
                     <span>Youth Alive Executives</span>
@@ -398,11 +407,11 @@
                 
                 <div class="committee-card">
                     <img src="images/avatars/IMG_20260413_094621.jpg" alt="Committee Member">
-                    <h4>Dr. Dns. Olukemi Esther Adeoye</h4>
+                    <h4>Dns. Dr. Olukemi Esther Adeoye</h4>
                     <span>Deaconess</span>
                 </div>
 
-                <div class="committee-card">
+                <div class="committee-card group-card">
                     <img src="images/avatars/IMG_20260413_111703.jpg" alt="Committee Member">
                     <h4>Youth Alive</h4>
                     <span>Youth Alive Executives</span>
@@ -423,6 +432,7 @@
             </div>
         </div>
     </section>
+    
     <section class="s-social">
             
         <div class="row social-content">
