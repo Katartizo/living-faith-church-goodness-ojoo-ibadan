@@ -27,7 +27,81 @@
         }
         
         .spinning-logo {
-            animation: flip3d 5s linear infinite; /* Flips once every 5 seconds */
+            animation: flip3d 5s linear infinite; 
+        }
+
+        /* --- NEW: Units Gallery Scrolling Marquee (Left to Right) --- */
+        .s-units-gallery {
+            padding: 6rem 0 4rem 0;
+            background-color: #f9f9f9;
+            overflow: hidden;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .scrolling-wrapper {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 1rem 0 2rem 0;
+        }
+
+        .scrolling-track-reverse {
+            display: inline-flex;
+            /* Increased to 45s so the 9 cards don't fly by too fast */
+            animation: scrollTrackReverse 45s linear infinite; 
+        }
+
+        /* Pauses the scroll when the user hovers over it */
+        .scrolling-track-reverse:hover {
+            animation-play-state: paused;
+        }
+
+        .unit-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 320px; /* Wider card for group photos */
+            margin: 0 15px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            text-align: center;
+            white-space: normal; 
+            transition: transform 0.3s ease;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-5px); 
+        }
+
+        .unit-card img {
+            width: 100%;
+            height: 180px; /* Rectangular shape for groups */
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 15px;
+            border: 2px solid #cc0000; 
+        }
+
+        .unit-card h4 {
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: #cc0000;
+        }
+
+        /* The magic that makes it scroll left-to-right */
+        @keyframes scrollTrackReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); } 
         }
     </style>
 
@@ -97,75 +171,59 @@
                 
                 <div class="row block-large-1-2 block-1000-full block-list">
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">Ushering Unit.</h4>
+                        <h4 class="block-list__title-with-num">Ushers & Crowd Control.</h4>
                         <p>
                         The welcoming face of the church. This unit is responsible for maintaining order, directing worshippers to their seats, organizing the congregation during ministrations, and ensuring a peaceful atmosphere during all services.
                         </p>
                     </div>
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Children's Church.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Children's Church.</h4>
                         <p>
                         Dedicated to raising the next generation of giants. This unit teaches the Word of Faith to children in a fun, engaging, and age-appropriate manner, ensuring they grow in the way of the Lord.
                         </p>
                     </div>
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        The Choir.
-                        </h4>
+                        <h4 class="block-list__title-with-num">The Choir.</h4>
                         <p>
                         Ministering to God and the congregation through high praises and deep worship. The choir creates an atmosphere for the miraculous to take place through anointed and spirited musical renditions.
                         </p>
                     </div>
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Prayer Squad.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Prayer Squad.</h4>
                         <p>
                         The spiritual engine room of the church. This unit stands in the gap, interceding for the church leadership, the congregation, the success of our services, and the advancement of the Kingdom of God.
                         </p>
                     </div>
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Protocol & Hospitality.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Protocol & Hospitality.</h4>
                         <p>
                         This unit ensures that visiting ministers, special guests, and new converts are well taken care of. They handle logistics, welfare, and ensure everyone feels the love of Christ upon entering the church.
                         </p>
                     </div>
                     
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Sanctuary & Decoration.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Sanctuary & Decoration.</h4>
                         <p>
                         Cleanliness is next to godliness. This dedicated team ensures the church auditorium and premises are kept spotless, while also creatively beautifying the sanctuary with floral arrangements and stage designs to make the House of God glorious for every service.
                         </p>
                     </div>
 
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Technical & Media.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Technical & Media.</h4>
                         <p>
                         Handling all audio, visual, and lighting operations. This unit ensures excellent sound quality in the auditorium and manages the live streaming of services to our online audience across the globe.
                         </p>
                     </div>
 
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Evangelism Unit.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Evangelism Unit.</h4>
                         <p>
                         The heartbeat of the Kingdom. This unit leads the church's outreach efforts, taking the Liberation Mandate to the streets, sharing the gospel, and winning souls for Christ.
                         </p>
                     </div>
 
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                        Follow-Up Unit.
-                        </h4>
+                        <h4 class="block-list__title-with-num">Follow-Up Unit.</h4>
                         <p>
                         This loving team ensures that first-time visitors and new converts are warmly contacted, nurtured, and integrated into the church family until they are fully established in the faith.
                         </p>
@@ -270,6 +328,114 @@
         </div>
 
     </section> 
+
+    <section class="s-units-gallery">
+        <div class="row">
+            <div class="column large-full">
+                <h2 class="gallery-title">
+                    <span style="font-size: 0.6em; color: #cc0000; margin-right: 10px; vertical-align: middle; opacity: 0.7;">← →</span>
+                    Our Units in Action
+                    <span style="font-size: 0.6em; color: #cc0000; margin-left: 10px; vertical-align: middle; opacity: 0.7;">← →</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="scrolling-wrapper">
+            <div class="scrolling-track-reverse">
+                
+                <div class="unit-card">
+                    <img src="images/avatars/user-01.jpg" alt="Ushering Unit">
+                    <h4>Ushering Unit</h4>
+                </div>
+                
+                <div class="unit-card">
+                    <img src="images/avatars/user-02.jpg" alt="Children's Church">
+                    <h4>Children's Church</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-03.jpg" alt="The Choir">
+                    <h4>The Choir</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-04.jpg" alt="Prayer Squad">
+                    <h4>Prayer Squad</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-05.jpg" alt="Protocol & Hospitality">
+                    <h4>Protocol & Hospitality</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-01.jpg" alt="Sanctuary & Decoration">
+                    <h4>Sanctuary & Decoration</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-02.jpg" alt="Technical & Media">
+                    <h4>Technical & Media</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-03.jpg" alt="Evangelism Unit">
+                    <h4>Evangelism Unit</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-04.jpg" alt="Follow-Up Unit">
+                    <h4>Follow-Up Unit</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-01.jpg" alt="Ushering Unit">
+                    <h4>Ushering Unit</h4>
+                </div>
+                
+                <div class="unit-card">
+                    <img src="images/avatars/user-02.jpg" alt="Children's Church">
+                    <h4>Children's Church</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-03.jpg" alt="The Choir">
+                    <h4>The Choir</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-04.jpg" alt="Prayer Squad">
+                    <h4>Prayer Squad</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-05.jpg" alt="Protocol & Hospitality">
+                    <h4>Protocol & Hospitality</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-01.jpg" alt="Sanctuary & Decoration">
+                    <h4>Sanctuary & Decoration</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-02.jpg" alt="Technical & Media">
+                    <h4>Technical & Media</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-03.jpg" alt="Evangelism Unit">
+                    <h4>Evangelism Unit</h4>
+                </div>
+
+                <div class="unit-card">
+                    <img src="images/avatars/user-04.jpg" alt="Follow-Up Unit">
+                    <h4>Follow-Up Unit</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
     
     <section class="s-social">
             
@@ -312,7 +478,7 @@
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                                        <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
+                        <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
                     </a>
                 </div>  
                 <p>
@@ -324,11 +490,11 @@
                     <div class="column large-7 medium-full">
                         <h4 class="h6">Our Location</h4>
                       <p>
-    Living Faith Church Goodness,<br>
-    Opp Olorun Kole House, Lane 3,<br>
-    Area 4, Goodness Estate, Ojoo,<br>
-    Ibadan, Oyo State, Nigeria.
-</p>
+                        Living Faith Church Goodness,<br>
+                        Opp Olorun Kole House, Lane 3,<br>
+                        Area 4, Goodness Estate, Ojoo,<br>
+                        Ibadan, Oyo State, Nigeria.
+                    </p>
         
                         <p>
                         <a href="https://maps.app.goo.gl/SP7xRj5BcpEdWYUPA" target="_blank" class="btn btn--footer">Get Direction</a>
