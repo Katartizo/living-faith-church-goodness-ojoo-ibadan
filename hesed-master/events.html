@@ -27,7 +27,50 @@
         }
         
         .spinning-logo {
-            animation: flip3d 3s linear infinite; /* Flips once every 5 seconds */
+            animation: flip3d 3s linear infinite;
+        }
+
+        /* Countdown Styles */
+        .countdown-wrap {
+            background: #cc0000;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 6rem;
+            box-shadow: 0 15px 30px rgba(204, 0, 0, 0.2);
+        }
+        .countdown { display: flex; justify-content: center; gap: 15px; margin-top: 2rem; }
+        .countdown-item { background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; min-width: 70px; }
+        .countdown-number { display: block; font-size: 3rem; font-weight: bold; line-height: 1; }
+        .countdown-label { font-size: 1.1rem; text-transform: uppercase; }
+
+        /* Timeline Styles */
+        .timeline-container { max-width: 900px; margin: 0 auto; position: relative; padding-left: 60px; }
+        .timeline-container::before { content: ''; position: absolute; left: 25px; top: 0; bottom: 0; width: 2px; background: #eee; }
+        .timeline-item { position: relative; margin-bottom: 8rem; display: flex; align-items: flex-start; gap: 30px; }
+        .timeline-dot { position: absolute; left: -50px; top: 10px; width: 30px; height: 30px; background: #cc0000; border: 4px solid #fff; border-radius: 50%; z-index: 2; box-shadow: 0 0 0 2px #cc0000; }
+        
+        .service-img { width: 160px; height: 160px; object-fit: cover; border-radius: 12px; border: 4px solid #f9f9f9; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .timeline-content h3 { color: #cc0000; font-size: 1.6rem; text-transform: uppercase; margin: 0; }
+        .timeline-content h4 { font-size: 2.6rem; margin: 0.5rem 0; }
+
+        .btn-reminder {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background: #25d366;
+            color: white !important;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline-item { flex-direction: column; }
+            .service-img { width: 100%; height: 180px; }
+            .countdown { gap: 8px; }
+            .countdown-item { min-width: 60px; padding: 10px; }
         }
     </style>
 
@@ -43,30 +86,30 @@
         </div>
     </div>
 
-
     <header class="s-header">
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
-   margin-left: -15px; border-radius: 50%;">
+                <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
             </a>
         </div>
 
-       <nav class="header-nav-wrap">
-    <ul class="header-nav">
-        <li><a href="index.html" title="Home">Home</a></li>
-        <li><a href="about.html" title="About">About</a></li>
-        <li><a href="events.html" title="Services">Events</a></li>
-        <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
-        <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
-        <li><a href="contact.html" title="Contact us">Contact</a></li>
-    </ul>
-</nav>
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="about.html" title="About">About</a></li>
+                <li class="current"><a href="events.html" title="Services">Events</a></li>
+                <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
+                <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
+                <li><a href="contact.html" title="Contact us">Contact</a></li>
+            </ul>
+        </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-    </header> <section class="page-header page-header--events">
+    </header>
+
+    <section class="page-header page-header--events">
 
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
@@ -75,153 +118,125 @@
             </div>
         </div>
 
-    </section> <section class="page-content">
-        
-        <div class="row wide block-large-1-2 block-900-full events-list">
-            <div class="column events-list__item">
-    <h3 class="display-1 events-list__item-title">
-        <a href="#0" title="">Covenant Hour of Prayer.</a>
-    </h3>
-    <p>
-        Start your day with God! Join us every morning for an intensive time of prophetic prayers, word ministration, and daily empowerment to take charge of your day and walk in victory.
-    </p>
-    <ul class="events-list__meta">
-        <li class="events-list__meta-date">Monday to Saturday</li>
-        <li class="events-list__meta-time">5:45AM - 6:30AM</li>
-        <li class="events-list__meta-location">LFC Goodness Auditorium, Ojoo</li>
-    </ul>
-</div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#0" title="">Covenant Day of Settlement.</a>
-                </h3>
-                <p>
-                Join us for a special prophetic service where God will be settling every area of concern in your life. Come expectant, with your faith fully engaged to receive your long-awaited testimonies and breakthroughs.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Sunday, April 19, 2026</li>
-                    <li class="events-list__meta-time">7:30AM & 9:30AM</li>
-                    <li class="events-list__meta-location">LFC Goodness Auditorium, Ojoo</li>
-                </ul>
-            </div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#0" title="">Week of Spiritual Emphasis.</a>
-                </h3>
-                <p>
-                A three-day spiritual journey of fasting, prayer, and the communion. It is a time to wait upon the Lord, renew your spiritual strength, and hear directly from Heaven concerning your next level of glory.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Wed, May 6 - Fri, May 8, 2026</li>
-                    <li class="events-list__meta-time">5:30PM Daily</li>
-                    <li class="events-list__meta-location">LFC Goodness Auditorium, Ojoo</li>
-                </ul>
-            </div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#0" title="">Youth Alive Congress.</a>
-                </h3>
-                <p>
-                Calling all youths! Join the Youth Alive Fellowship for a time of intense worship, word impartation, and career empowerment. Discover how to navigate life as a victorious young believer in today's world.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Friday, May 22, 2026</li>
-                    <li class="events-list__meta-time">5:00PM - 7:00PM</li>
-                    <li class="events-list__meta-location">LFC Goodness Auditorium, Ojoo</li>
-                </ul>
-            </div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#0" title="">Workers' Retreat.</a>
-                </h3>
-                <p>
-                A special time of refreshing and impartation for all church workers and ordained personnel. Come and be equipped with fresh grace and anointing for maximum impact in your service to God and humanity.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Saturday, June 13, 2026</li>
-                    <li class="events-list__meta-time">8:00AM - 12:00PM</li>
-                    <li class="events-list__meta-location">LFC Goodness Auditorium, Ojoo</li>
-                </ul>
-            </div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#0" title="">Midweek Communion Service.</a>
-                </h3>
-                <p>
-                Experience the power of the Holy Communion. As we partake of the flesh and blood of Jesus Christ, expect divine healing, supernatural strength, and a turnaround in every challenging situation.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Every Wednesday</li>
-                    <li class="events-list__meta-time">5:30PM - 7:00PM</li>
-                    <li class="events-list__meta-location">LFC Goodness Auditorium, Ojoo</li>
-                </ul>
-            </div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#0" title="">Winners Satellite Fellowship (WSF).</a>
-                </h3>
-                <p>
-                Join our home cell fellowship (WSF) at a center near you. It is a time to share the Word of God, pray together, and experience true family love and community support right in your neighborhood.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Every Saturday</li>
-                    <li class="events-list__meta-time">5:00PM - 6:00PM</li>
-                    <li class="events-list__meta-location">Various Centers across Ojoo</li>
-                </ul>
-            </div>
-        </div> <div class="row">
+    </section>
+
+    <section class="page-content">
+
+        <div class="row">
             <div class="column large-full">
-                <nav class="pgn">
-                    <ul>
-                        <li><a class="pgn__prev" href="#0">Prev</a></li>
-                        <li><span class="pgn__num current">1</span></li>
-                        <li><a class="pgn__num" href="#0">2</a></li>
-                        <li><a class="pgn__next" href="#0">Next</a></li>
-                    </ul>
-                </nav> </div>
+                <div class="countdown-wrap">
+                    <h2 style="color: white; margin-bottom: 0;">Covenant Day of Vengeance</h2>
+                    <p>Sunday, April 19, 2026 | 8:00 AM Sharp</p>
+                    <div class="countdown" id="timer">
+                        <div class="countdown-item"><span class="countdown-number" id="days">00</span><span class="countdown-label">Days</span></div>
+                        <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Hrs</span></div>
+                        <div class="countdown-item"><span class="countdown-number" id="mins">00</span><span class="countdown-label">Min</span></div>
+                        <div class="countdown-item"><span class="countdown-number" id="secs">00</span><span class="countdown-label">Sec</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column large-full" style="text-align: center; margin-bottom: 5rem;">
+                <h2 class="display-1">Our Monthly Encounters</h2>
+                <p>One Service. One Encounter. Join us every Sunday at 8:00 AM.</p>
+            </div>
         </div>
 
-    </section> <section class="s-social">
+        <div class="timeline-container">
             
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <img src="https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?auto=format&fit=crop&w=300&q=80" alt="Prophetic" class="service-img">
+                <div class="timeline-content">
+                    <h3>1st Sunday</h3>
+                    <h4>Prophetic Entrance Service</h4>
+                    <p>Start your month with God! Join us as we receive the word of direction and the prophetic mantle to dominate the weeks ahead.</p>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Prophetic+Entrance+Service+-+LFC+Goodness&dates=20260503T070000Z/20260503T100000Z&location=LFC+Goodness+Ojoo" target="_blank" class="btn-reminder">📅 Set Reminder</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?auto=format&fit=crop&w=300&q=80" alt="Communion" class="service-img">
+                <div class="timeline-content">
+                    <h3>2nd Sunday</h3>
+                    <h4>Special Monthly Communion Service</h4>
+                    <p>Experience the life-transforming power of the Flesh and the Blood. A service dedicated to supernatural healing and strength.</p>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Monthly+Communion+Service&dates=20260510T070000Z/20260510T100000Z&location=LFC+Goodness+Ojoo" target="_blank" class="btn-reminder">📅 Set Reminder</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <img src="https://images.unsplash.com/photo-1606761145700-60070942735d?auto=format&fit=crop&w=300&q=80" alt="Anointing" class="service-img">
+                <div class="timeline-content">
+                    <h3>3rd Sunday</h3>
+                    <h4>Special Monthly Anointing Service</h4>
+                    <p>The yoke-breaking power of the Spirit. Come with your bottles of oil and a heart full of expectations for a prophetic touch.</p>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Anointing+Service+-+LFC+Goodness&dates=20260419T070000Z/20260419T100000Z&location=LFC+Goodness+Ojoo" target="_blank" class="btn-reminder">📅 Set Reminder</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=300&q=80" alt="Thanksgiving" class="service-img">
+                <div class="timeline-content">
+                    <h3>Last Sunday</h3>
+                    <h4>Monthly Thanksgiving & Dedication</h4>
+                    <p>Wrapping up the month by returning glory to God. Featuring Grand Thanksgiving, and Children & Marriage Dedications.</p>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Thanksgiving+Service&dates=20260426T070000Z/20260426T100000Z&location=LFC+Goodness+Ojoo" target="_blank" class="btn-reminder">📅 Set Reminder</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 8rem; border-top: 1px solid #eee; padding-top: 6rem;">
+            <div class="column large-6 tab-full">
+                <h2 class="display-1">Midweek Encounters</h2>
+                <p><strong>Covenant Hour of Prayer:</strong> Mon - Sat | 5:45 AM - 6:30 AM</p>
+                <p><strong>Midweek Communion:</strong> Wednesday | 5:00 PM - 6:30 PM</p>
+            </div>
+            <div class="column large-6 tab-full">
+                <h2 class="display-1">Satellite Fellowship</h2>
+                <p><strong>Winners Satellite Fellowship (WSF):</strong> Join our home cell fellowship every Saturday at 5:00 PM for community support and family love across Ojoo.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="s-social">
         <div class="row social-content">
             <div class="column">
                 <ul class="social-list">
                     <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--facebook"></span>
-                            <span class="social-list__text">Facebook</span>
-                        </a>
+                        <a href="#0" title=""><span class="social-list__icon social-list__icon--facebook"></span><span class="social-list__text">Facebook</span></a>
                     </li>
                     <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--twitter"></span>
-                            <span class="social-list__text">Twitter</span>
-                        </a>
+                        <a href="#0" title=""><span class="social-list__icon social-list__icon--twitter"></span><span class="social-list__text">Twitter</span></a>
                     </li>
                     <li class="social-list__item">
-                        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zp1t5bf" title="">
-                            <span class="social-list__icon social-list__icon--instagram"></span>
-                            <span class="social-list__text">Instagram</span>
-                        </a>
+                        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zp1t5bf" title=""><span class="social-list__icon social-list__icon--instagram"></span><span class="social-list__text">Instagram</span></a>
                     </li>
                     <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--email"></span>
-                            <span class="social-list__text">Email</span>
-                        </a>
+                        <a href="#0" title=""><span class="social-list__icon social-list__icon--email"></span><span class="social-list__text">Email</span></a>
                     </li>
                 </ul>
             </div>
-        </div> </section> <footer class="s-footer">
+        </div>
+    </section>
+
+    <footer class="s-footer">
 
         <div class="row footer-top">
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                                     <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px;
-   margin-left: -15px; border-radius: 50%;">
+                        <img src="images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
                     </a>
-                </div>  <p>
+                </div>
+                <p>
                 Living Faith Church Worldwide (Winners' Chapel International). A place of empowerment, liberation, and triumph. Join us and experience the transforming power of the Word of Faith.
                 </p>
             </div>
@@ -229,16 +244,13 @@
                 <div class="row">
                     <div class="column large-7 medium-full">
                         <h4 class="h6">Our Location</h4>
-                   <p>
-    Living Faith Church Goodness,<br>
-    Opp Olorun Kole House, Lane 3,<br>
-    Area 4, Goodness Estate, Ojoo,<br>
-    Ibadan, Oyo State, Nigeria.
-</p>
-        
                         <p>
-                        <a href="https://maps.app.goo.gl/SP7xRj5BcpEdWYUPA" target="_blank" class="btn btn--footer">Get Direction</a>
+                        Living Faith Church Goodness,<br>
+                        Opp Olorun Kole House, Lane 3,<br>
+                        Area 4, Goodness Estate, Ojoo,<br>
+                        Ibadan, Oyo State, Nigeria.
                         </p>
+                        <a href="https://maps.app.goo.gl/SP7xRj5BcpEdWYUPA" target="_blank" class="btn btn--footer">Get Direction</a>
                     </div>
                     <div class="column large-5 medium-full">
                         <h4 class="h6">Quick Links</h4>
@@ -253,18 +265,38 @@
                     </div>
                 </div>
             </div>
-        </div> <div class="row footer-bottom">
+        </div>
+
+        <div class="row footer-bottom">
             <div class="column ss-copyright">
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
-                <span>Designed by <a href="https://victor-portfolio-weld.vercel.app/">Victor</a></span>
+                <span>Developed by <a href="https://victor-portfolio-weld.vercel.app/">Victor</a></span>
             </div>
-        </div> <div class="ss-go-top">
+        </div>
+
+        <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
-        </div> </footer> <script src="js/jquery-3.2.1.min.js"></script>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        const countdownDate = new Date("April 19, 2026 08:00:00").getTime();
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("mins").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("secs").innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+            if (distance < 0) { clearInterval(x); document.getElementById("timer").innerHTML = "SERVICE STARTED"; }
+        }, 1000);
+    </script>
 
 </body>
 </html>
