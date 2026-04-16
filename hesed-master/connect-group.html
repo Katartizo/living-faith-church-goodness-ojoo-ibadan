@@ -32,7 +32,72 @@
         }
         
         .spinning-logo {
-            animation: flip3d 5s linear infinite; /* Flips once every 5 seconds */
+            animation: flip3d 5s linear infinite; 
+        }
+
+        /* WSF Directory Card Styles */
+        .wsf-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-top: 4px solid #cc0000;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .wsf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(204,0,0,0.15);
+        }
+        
+        /* New Header with Image */
+        .wsf-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .wsf-header img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #cc0000;
+            flex-shrink: 0;
+        }
+        .wsf-header h4 {
+            color: #cc0000;
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+
+        .wsf-card p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .wsf-card strong {
+            color: #333;
+        }
+        
+        /* The Clickable Phone Button */
+        .wsf-phone {
+            display: inline-block;
+            background: #f9f9f9;
+            padding: 5px 12px;
+            border-radius: 20px;
+            color: #cc0000 !important;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 5px;
+            transition: all 0.3s ease;
+        }
+        .wsf-phone:hover {
+            background: #cc0000;
+            color: #ffffff !important;
         }
     </style>
 
@@ -47,7 +112,6 @@
             <div></div>
         </div>
     </div>
-
 
     <header class="s-header">
 
@@ -98,10 +162,154 @@
 
                 <br>
 
-                <h2>Locate a WSF Center.</h2>
+                <h2 class="display-1" style="text-align: center; margin-bottom: 1rem;">Our WSF Centers Directory</h2>
+                <p style="text-align: center; margin-bottom: 4rem;">Browse our 11 active home cells below. If you need help finding the one closest to your street, use the contact form at the bottom of this page!</p>
+
+                <div class="row block-large-1-2 block-tab-full">
+                    
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-01.jpg" alt="Dr. Olayinka Anifowose">
+                                <h4>Jerusalem Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Dr. Olayinka Anifowose</p>
+                            <p><strong>Address:</strong> 2, Jerusalem Crescent, Arulogun Road, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348068320220" class="wsf-phone">📞 080 6832 0220</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-02.jpg" alt="Pastor Yusuf Olayinka">
+                                <h4>Beulah Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Pastor Yusuf Olayinka</p>
+                            <p><strong>Address:</strong> No 59, Zone A behind Milestone Sec Sch, Gospel Town, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348034218546" class="wsf-phone">📞 080 3421 8546</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-03.jpg" alt="Coordinator">
+                                <h4>Zion Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-04.jpg" alt="Coordinator">
+                                <h4>Goshen Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-05.jpg" alt="Coordinator">
+                                <h4>Bethel Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-06.jpg" alt="Coordinator">
+                                <h4>Shiloh Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-01.jpg" alt="Coordinator">
+                                <h4>Hebron Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-02.jpg" alt="Coordinator">
+                                <h4>Peniel Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-03.jpg" alt="Coordinator">
+                                <h4>Mahanaim Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-04.jpg" alt="Coordinator">
+                                <h4>Gilead Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="wsf-card">
+                            <div class="wsf-header">
+                                <img src="images/avatars/user-05.jpg" alt="Coordinator">
+                                <h4>Elim Cell</h4>
+                            </div>
+                            <p><strong>Coordinator:</strong> Coordinator Name</p>
+                            <p><strong>Address:</strong> Cell Address Here, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2340000000000" class="wsf-phone">📞 0800 000 0000</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <br><br><br>
+
+                <hr>
+
+                <br><br>
+
+                <h2>Still Not Sure Where to Go?</h2>
                 
                 <p>
-                Kindly fill out the form below to help us understand your location, and our team will connect you to the WSF center closest to your home.
+                Kindly fill out the form below to help us understand your exact location, and our team will personally connect you to the WSF center closest to your home.
                 </p>
 
                 <form name="connectForm" id="connectForm" class="connectForm" method="POST" action="https://formspree.io/f/mgopjdnv" autocomplete="off">
@@ -123,7 +331,9 @@
                             <input name="cAddress" id="cAddress" class="h-full-width h-remove-bottom" placeholder="Your Home Address / Area in Ojoo" value="" type="text" required>
                         </div>
 
-                       
+                        <div class="form-field">
+                            <input name="cAge" id="cAge" class="h-full-width h-remove-bottom" placeholder="Your Age Bracket (e.g., 18-25, 30-40)" value="" type="text">
+                        </div>
 
                         <div class="comments form-field">
                             <textarea name="cComments" id="cComments" class="h-full-width h-remove-bottom" placeholder="Any specific questions or prayer requests?"></textarea>
@@ -131,7 +341,7 @@
 
                         <br>
 
-                        <input name="submit" id="submit" class="btn btn--primary btn--large h-full-width" value="Find A Center" type="submit">
+                        <input name="submit" id="submit" class="btn btn--primary btn--large h-full-width" value="Help Me Find A Center" type="submit">
 
                     </fieldset>
                 </form> 
@@ -252,7 +462,7 @@
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
                 
                 <div style="margin-top: 15px;">
-                    <span style="display: block; margin-bottom: 5px; line-height: 2;">Developed by: <span style="color: #ffffff; font-weight: bold;">Victor</span></span>
+                    <span style="display: block; margin-bottom: 5px; line-height: 1;">Developed by: <span style="color: #ffffff; font-weight: bold;">Victor</span></span>
                     <a href="https://victor-portfolio-weld.vercel.app/" style="background-color: #cc0000; color: #ffffff; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; display: inline-block;">Click Here To View My Work ➔</a>
                 </div>
                 
