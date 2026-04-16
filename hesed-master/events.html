@@ -35,20 +35,32 @@
             animation: flip3d 3s linear infinite;
         }
 
-        /* Countdown Styles */
+        /* Countdown Styles - Now Clickable */
+        .countdown-link {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 6rem;
+            transition: transform 0.3s ease; /* Adds a nice hover effect */
+        }
+        
+        .countdown-link:hover {
+            transform: translateY(-5px);
+        }
+
         .countdown-wrap {
             background: #cc0000;
             color: white;
             padding: 4rem 2rem;
             text-align: center;
             border-radius: 10px;
-            margin-bottom: 6rem;
             box-shadow: 0 15px 30px rgba(204, 0, 0, 0.2);
+            cursor: pointer; /* Changes mouse to a clicking finger */
         }
+        
         .countdown { display: flex; justify-content: center; gap: 15px; margin-top: 2rem; }
         .countdown-item { background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; min-width: 70px; }
-        .countdown-number { display: block; font-size: 3rem; font-weight: bold; line-height: 1; }
-        .countdown-label { font-size: 1.1rem; text-transform: uppercase; }
+        .countdown-number { display: block; font-size: 3rem; font-weight: bold; line-height: 1; color: white;}
+        .countdown-label { font-size: 1.1rem; text-transform: uppercase; color: white;}
 
         /* Timeline Styles */
         .timeline-container { max-width: 900px; margin: 0 auto; position: relative; padding-left: 60px; }
@@ -129,16 +141,18 @@
 
         <div class="row">
             <div class="column large-full">
-                <div class="countdown-wrap">
-                    <h2 style="color: white; margin-bottom: 0;">Covenant Day of Vengeance</h2>
-                    <p>Sunday, April 19, 2026 | 8:00 AM Sharp</p>
-                    <div class="countdown" id="timer">
-                        <div class="countdown-item"><span class="countdown-number" id="days">00</span><span class="countdown-label">Days</span></div>
-                        <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Hrs</span></div>
-                        <div class="countdown-item"><span class="countdown-number" id="mins">00</span><span class="countdown-label">Min</span></div>
-                        <div class="countdown-item"><span class="countdown-number" id="secs">00</span><span class="countdown-label">Sec</span></div>
+                <a href="events-single.html" class="countdown-link">
+                    <div class="countdown-wrap">
+                        <h2 style="color: white; margin-bottom: 2;">Covenant Day of Vengeance</h2>
+                        <p style="color: #ffffff; opacity: 0.9;">Sunday, April 19, 2026 | 8:00 AM Sharp <br><br><span style="font-weight: bold; text-decoration: underline; font-size: 2 rem;">Click Here For More Information ➔</span></p>
+                        <div class="countdown" id="timer">
+                            <div class="countdown-item"><span class="countdown-number" id="days">00</span><span class="countdown-label">Days</span></div>
+                            <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Hrs</span></div>
+                            <div class="countdown-item"><span class="countdown-number" id="mins">00</span><span class="countdown-label">Min</span></div>
+                            <div class="countdown-item"><span class="countdown-number" id="secs">00</span><span class="countdown-label">Sec</span></div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         
@@ -277,13 +291,15 @@
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
                 
                 <div style="margin-top: 15px;">
-                    <span>Developed by: <span style="color: #ffffff; font-weight: bold;">Victor</span></span>
-                    <a href="https://victor-portfolio-weld.vercel.app/" style="background-color: #cc0000; color: #ffffff; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Click Here To View My Work ➔</a>
+                    <span style="display: block; margin-bottom: 5px; line-height: 2;">Developed by: <span style="color: #ffffff; font-weight: bold;">Victor</span></span>
+                    <a href="https://victor-portfolio-weld.vercel.app/" style="background-color: #cc0000; color: #ffffff; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; display: inline-block;">Click Here To View My Work ➔</a>
                 </div>
-                </div>
-                </div>
-                <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
+                
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
         </div>
