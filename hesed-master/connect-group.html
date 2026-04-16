@@ -35,7 +35,7 @@
             animation: flip3d 5s linear infinite; 
         }
 
-        /* WSF Directory Card Styles */
+        /* UPDATED: WSF Directory Card Styles */
         .wsf-card {
             background: #ffffff;
             padding: 2.5rem;
@@ -45,34 +45,26 @@
             border-top: 4px solid #cc0000;
             transition: transform 0.3s ease;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center; /* Centers everything for a cleaner look */
         }
         .wsf-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(204,0,0,0.15);
         }
         
-        /* New Header with Image */
-        .wsf-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        /* New Image Wrapper to make pictures sit perfectly */
+        .wsf-img-wrapper {
             margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
         }
-        .wsf-header img {
-            width: 70px;
-            height: 70px;
+        .wsf-img-wrapper img {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #cc0000;
-            flex-shrink: 0;
-        }
-        .wsf-header h4 {
-            color: #cc0000;
-            margin: 0;
-            font-size: 1.8rem;
-            line-height: 1.2;
+            object-position: top center;
+            border: 3px solid #cc0000;
         }
 
         .wsf-card p {
@@ -98,6 +90,18 @@
         .wsf-phone:hover {
             background: #cc0000;
             color: #ffffff !important;
+        }
+
+        /* NEW: Cell Name Badge at the bottom */
+        .wsf-cell-name {
+            background-color: #cc0000;
+            color: #ffffff;
+            margin: auto 0 0 0; /* Forces it to stick to the very bottom */
+            padding: 12px 10px;
+            border-radius: 5px;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
     </style>
 
@@ -169,137 +173,138 @@
                     
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG_20260413_093042.jpg" alt="Pastor Paul">
-                                <h4>Zion Cell</h4>
                             </div>
                             <p><strong>Coordinator:</strong> Pst. Paul Bolarinwa</p>
                             <p><strong>Address:</strong> Opp. LFC Goodness</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348107515732" class="wsf-phone">📞 081 0751 5732</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348107515732" class="wsf-phone">📞 081 0751 5732</a></p>
+                            <h4 class="wsf-cell-name">Zion Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG_20260413_092713.jpg" alt="Pastor Yusuf Olayinka">
-                                <h4>Beulah cell</h4>
                             </div>
                             <p><strong>Coordinator:</strong> Pastor Yusuf Olayinka</p>
                             <p><strong>Address:</strong> No 59, Zone A behind Milestone Sec Sch, Gospel Town, Ibadan</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348034218546" class="wsf-phone">📞 080 3421 8546</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348034218546" class="wsf-phone">📞 080 3421 8546</a></p>
+                            <h4 class="wsf-cell-name">Beulah Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG_20260413_090422.jpg" alt="Coordinator">
-                                <h4> Jerusalem Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Dr Olayinka Anifowose</p>
-                            <p><strong>Address:</strong> No 2, Jerusalem Crescent, Arulogun Road, Ojoo, Ibadan </p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348068320220" class="wsf-phone">📞 080 6832 0220</a></p>
+                            <p><strong>Coordinator:</strong> Dr. Olayinka Anifowose</p>
+                            <p><strong>Address:</strong> No 2, Jerusalem Crescent, Arulogun Road, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348068320220" class="wsf-phone">📞 080 6832 0220</a></p>
+                            <h4 class="wsf-cell-name">Jerusalem Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/WSF.Director.jpg" alt="Coordinator">
-                                <h4>Goshen Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Bro. Emmanuel Olayiwola </p>
-                            <p><strong>Address:</strong> Mr. Okoli House, Opp. Gofamint Church, Ajoro, Goodness Estate, Ojoo, Ibadan </p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348037395111" class="wsf-phone">📞 080 3739 5111</a></p>
+                            <p><strong>Coordinator:</strong> Bro. Emmanuel Olayiwola</p>
+                            <p><strong>Address:</strong> Mr. Okoli House, Opp. Gofamint Church, Ajoro, Goodness Estate, Ojoo, Ibadan</p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348037395111" class="wsf-phone">📞 080 3739 5111</a></p>
+                            <h4 class="wsf-cell-name">Goshen Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/user-05.jpg" alt="Coordinator">
-                                <h4> Virtue of God Cell</h4>
                             </div>
                             <p><strong>Coordinator:</strong> Pst. Gbenga Osalaye</p>
                             <p><strong>Address:</strong> No 12, Zone 3, Behind Coolceep Factory, Goodness Estate, Ojoo, Ibadan.</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2349134221538" class="wsf-phone">📞 091 3422 1538</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2349134221538" class="wsf-phone">📞 091 3422 1538</a></p>
+                            <h4 class="wsf-cell-name">Virtue of God Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG-20260416-WA0021.jpg" alt="Coordinator">
-                                <h4> Havillah Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Mrs Ruth Smart </p>
+                            <p><strong>Coordinator:</strong> Mrs Ruth Smart</p>
                             <p><strong>Address:</strong> 8A, zone 12, Road A, Alaka, Goodness Estate, Ojoo, Ibadan.</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348142709471" class="wsf-phone">📞 081 4270 9471</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348142709471" class="wsf-phone">📞 081 4270 9471</a></p>
+                            <h4 class="wsf-cell-name">Havillah Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/user-01.jpg" alt="Coordinator">
-                                <h4> Prosperity Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Moses Okediji </p>
+                            <p><strong>Coordinator:</strong> Moses Okediji</p>
                             <p><strong>Address:</strong> No 7, zone 6, Goodness Estate, Ojoo, Ibadan.</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2347035932255" class="wsf-phone">📞 070 3593 2255</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2347035932255" class="wsf-phone">📞 070 3593 2255</a></p>
+                            <h4 class="wsf-cell-name">Prosperity Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG-20260416-WA0023.jpg" alt="Coordinator">
-                                <h4> Fortune Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Mr Edward Abiodun  </p>
-                            <p><strong>Address:</strong> No 12 Aba-Eko road 12 ojoo, ibadan </p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348039191542" class="wsf-phone">📞 080 3919 1542</a></p>
+                            <p><strong>Coordinator:</strong> Mr Edward Abiodun</p>
+                            <p><strong>Address:</strong> No 12 Aba-Eko road 12 ojoo, ibadan</p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348039191542" class="wsf-phone">📞 080 3919 1542</a></p>
+                            <h4 class="wsf-cell-name">Fortune Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG_20260413_094621.jpg" alt="Coordinator">
-                                <h4>Amazing Grace Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Dr. Dns. Olukemi Adeoye </p>
+                            <p><strong>Coordinator:</strong> Dr. Dns. Olukemi Adeoye</p>
                             <p><strong>Address:</strong> No 17, Alafia Estate, Alaka, Ojoo, Ibadan.</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2349058374303" class="wsf-phone">📞 090 5837 4303</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2349058374303" class="wsf-phone">📞 090 5837 4303</a></p>
+                            <h4 class="wsf-cell-name">Amazing Grace Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG_20260412_121159.jpg" alt="Coordinator">
-                                <h4>Gilead Cell</h4>
                             </div>
-                            <p><strong>Coordinator:</strong> Mrs Olayiwola Blessing </p>
+                            <p><strong>Coordinator:</strong> Mrs Olayiwola Blessing</p>
                             <p><strong>Address:</strong> No 52, Zone 12, Alaka, Goodness Estate, Ojoo, Ibadan</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348131958214" class="wsf-phone">📞 081 3195 8214</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348131958214" class="wsf-phone">📞 081 3195 8214</a></p>
+                            <h4 class="wsf-cell-name">Gilead Cell</h4>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="wsf-card">
-                            <div class="wsf-header">
+                            <div class="wsf-img-wrapper">
                                 <img src="images/avatars/IMG-20260416-WA0022.jpg" alt="Coordinator">
-                                <h4> Bethel Cell</h4>
                             </div>
                             <p><strong>Coordinator:</strong> Bro. Omotayo Samuel</p>
                             <p><strong>Address:</strong> No 17, Zone 9, Road A, Behind Honeycomb School, Goodness Estate, Ojoo, Ibadan.</p>
-                            <p style="margin-bottom: 0;"><strong>Phone:</strong> <br><a href="tel:+2348152284081" class="wsf-phone">📞 081 5228 4081</a></p>
+                            <p style="margin-bottom: 2rem;"><strong>Phone:</strong> <br><a href="tel:+2348152284081" class="wsf-phone">📞 081 5228 4081</a></p>
+                            <h4 class="wsf-cell-name">Bethel Cell</h4>
                         </div>
                     </div>
 
                 </div>
+
                 <br><br><br>
 
                 <hr>
@@ -331,7 +336,9 @@
                             <input name="cAddress" id="cAddress" class="h-full-width h-remove-bottom" placeholder="Your Home Address / Area in Ojoo" value="" type="text" required>
                         </div>
 
-                        
+                        <div class="form-field">
+                            <input name="cAge" id="cAge" class="h-full-width h-remove-bottom" placeholder="Your Age Bracket (e.g., 18-25, 30-40)" value="" type="text">
+                        </div>
 
                         <div class="comments form-field">
                             <textarea name="cComments" id="cComments" class="h-full-width h-remove-bottom" placeholder="Any specific questions or prayer requests?"></textarea>
@@ -421,7 +428,8 @@
                     <a class="site-footer-logo" href="index.html">
                         <img src="https://living-faith-church-goodness-ojoo-i.vercel.app/images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
                     </a>
-                </div>  <p>
+                </div>  
+                <p>
                 Living Faith Church Worldwide (Winners' Chapel International). A place of empowerment, liberation, and triumph. Join us and experience the transforming power of the Word of Faith.
                 </p>
             </div>
@@ -429,12 +437,12 @@
                 <div class="row">
                     <div class="column large-7 medium-full">
                         <h4 class="h6">Our Location</h4>
-<p>
-    Living Faith Church Goodness,<br>
-    Opp Olorun Kole House, Lane 3,<br>
-    Area 4, Goodness Estate, Ojoo,<br>
-    Ibadan, Oyo State, Nigeria.
-</p>
+                        <p>
+                            Living Faith Church Goodness,<br>
+                            Opp Olorun Kole House, Lane 3,<br>
+                            Area 4, Goodness Estate, Ojoo,<br>
+                            Ibadan, Oyo State, Nigeria.
+                        </p>
         
                         <p>
                         <a href="https://maps.app.goo.gl/SP7xRj5BcpEdWYUPA" target="_blank" class="btn btn--footer">Get Direction</a>
