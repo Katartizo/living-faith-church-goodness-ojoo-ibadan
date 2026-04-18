@@ -35,7 +35,7 @@
             animation: flip3d 5s linear infinite; 
         }
 
-        /* --- NEW: Units Gallery Scrolling Marquee (Left to Right) --- */
+        /* --- NEW: Smart Infinite Marquee Styles --- */
         .s-units-gallery {
             padding: 6rem 0 4rem 0;
             background-color: #f9f9f9;
@@ -48,31 +48,31 @@
             margin-bottom: 2rem;
         }
 
-        .scrolling-wrapper {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 1rem 0 2rem 0;
+        /* The Draggable Container */
+        .unit-slider {
+            display: flex;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth native scrolling on mobile */
+            gap: 20px;
+            padding: 1rem 15px 2rem 15px;
+            /* Hide the ugly scrollbar */
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            cursor: grab;
         }
-
-        .scrolling-track-reverse {
-            display: inline-flex;
-            /* Increased to 45s so the 9 cards don't fly by too fast */
-            animation: scrollTrackReverse 45s linear infinite; 
+        .unit-slider:active {
+            cursor: grabbing;
         }
-
-        /* Pauses the scroll when the user hovers over it */
-        .scrolling-track-reverse:hover {
-            animation-play-state: paused;
+        .unit-slider::-webkit-scrollbar {
+            display: none;
         }
 
         .unit-card {
+            flex: 0 0 320px; /* Fixed width for group photos */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 320px; /* Wider card for group photos */
-            margin: 0 15px;
             padding: 15px;
             background: #ffffff;
             border-radius: 10px;
@@ -101,12 +101,6 @@
             font-size: 1.8rem;
             line-height: 1.2;
             color: #cc0000;
-        }
-
-        /* The magic that makes it scroll left-to-right */
-        @keyframes scrollTrackReverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); } 
         }
     </style>
 
@@ -338,108 +332,61 @@
         <div class="row">
             <div class="column large-full">
                 <h2 class="gallery-title">
-                    <span style="font-size: 0.6em; color: #cc0000; margin-right: 10px; vertical-align: middle; opacity: 0.7;">← →</span>
                     Our Units in Action
-                    <span style="font-size: 0.6em; color: #cc0000; margin-left: 10px; vertical-align: middle; opacity: 0.7;">← →</span>
                 </h2>
+                <p style="text-align: center; margin-bottom: 2rem; opacity: 0.7; font-size: 1.2rem;">Swipe or drag to view more ➔</p>
             </div>
         </div>
 
-        <div class="scrolling-wrapper">
-            <div class="scrolling-track-reverse">
-                
-                <div class="unit-card">
-                    <img src="images/avatars/user-01.jpg" alt="Ushering Unit">
-                    <h4>Ushering Unit</h4>
-                </div>
-                
-                <div class="unit-card">
-                    <img src="images/avatars/user-02.jpg" alt="Children's Church">
-                    <h4>Children's Church</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/IMG_20260413_111339.jpg" alt="The Choir">
-                    <h4>The Choir</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-04.jpg" alt="Prayer Squad">
-                    <h4>Prayer Squad</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-05.jpg" alt="Protocol & Hospitality">
-                    <h4>Protocol & Hospitality</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-01.jpg" alt="Sanctuary & Decoration">
-                    <h4>Sanctuary & Decoration</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/IMG_20260413_111801.jpg" alt="Technical & Media">
-                    <h4>Technical & Media</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-03.jpg" alt="Evangelism Unit">
-                    <h4>Evangelism Unit</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-04.jpg" alt="Follow-Up Unit">
-                    <h4>Follow-Up Unit</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-01.jpg" alt="Ushering Unit">
-                    <h4>Ushering Unit</h4>
-                </div>
-                
-                <div class="unit-card">
-                    <img src="images/avatars/user-02.jpg" alt="Children's Church">
-                    <h4>Children's Church</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/IMG_20260413_111339.jpg" alt="The Choir">
-                    <h4>The Choir</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-04.jpg" alt="Prayer Squad">
-                    <h4>Prayer Squad</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-05.jpg" alt="Protocol & Hospitality">
-                    <h4>Protocol & Hospitality</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-01.jpg" alt="Sanctuary & Decoration">
-                    <h4>Sanctuary & Decoration</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/IMG_20260413_111801.jpg" alt="Technical & Media">
-                    <h4>Technical & Media</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-03.jpg" alt="Evangelism Unit">
-                    <h4>Evangelism Unit</h4>
-                </div>
-
-                <div class="unit-card">
-                    <img src="images/avatars/user-04.jpg" alt="Follow-Up Unit">
-                    <h4>Follow-Up Unit</h4>
-                </div>
-
+        <div class="unit-slider" id="unitSlider">
+            
+            <div class="unit-card">
+                <img src="images/avatars/user-01.jpg" alt="Ushering Unit">
+                <h4>Ushering Unit</h4>
             </div>
+            
+            <div class="unit-card">
+                <img src="images/avatars/user-02.jpg" alt="Children's Church">
+                <h4>Children's Church</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/IMG_20260413_111339.jpg" alt="The Choir">
+                <h4>The Choir</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/user-04.jpg" alt="Prayer Squad">
+                <h4>Prayer Squad</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/user-05.jpg" alt="Protocol & Hospitality">
+                <h4>Protocol & Hospitality</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/user-01.jpg" alt="Sanctuary & Decoration">
+                <h4>Sanctuary & Decoration</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/IMG_20260413_111801.jpg" alt="Technical & Media">
+                <h4>Technical & Media</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/user-03.jpg" alt="Evangelism Unit">
+                <h4>Evangelism Unit</h4>
+            </div>
+
+            <div class="unit-card">
+                <img src="images/avatars/user-04.jpg" alt="Follow-Up Unit">
+                <h4>Follow-Up Unit</h4>
+            </div>
+
         </div>
+
     </section>
     
     <section class="s-social">
@@ -484,7 +431,8 @@
                     <a class="site-footer-logo" href="index.html">
                         <img src="https://living-faith-church-goodness-ojoo-i.vercel.app/images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
                     </a>
-                </div>  <p>
+                </div>  
+                <p>
                 Living Faith Church Worldwide (Winners' Chapel International). A place of empowerment, liberation, and triumph. Join us and experience the transforming power of the Word of Faith.
                 </p>
             </div>
@@ -540,6 +488,43 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('unitSlider');
+            let isPaused = false;
+            let animationId;
+
+            // Clone the original cards to create a seamless infinite loop
+            const cards = Array.from(slider.children);
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                slider.appendChild(clone);
+            });
+
+            // The Smooth Continuous Scroll Engine
+            function scroll() {
+                if (!isPaused) {
+                    slider.scrollLeft += 1; // Increase this number to make it move faster
+                    
+                    // If we have scrolled past the first set of cards, reset to zero silently
+                    if (slider.scrollLeft >= slider.scrollWidth / 2) {
+                        slider.scrollLeft = 0;
+                    }
+                }
+                animationId = requestAnimationFrame(scroll);
+            }
+
+            // Pause the movement when the user interacts with it
+            slider.addEventListener('mouseenter', () => isPaused = true);
+            slider.addEventListener('mouseleave', () => isPaused = false);
+            slider.addEventListener('touchstart', () => isPaused = true, {passive: true});
+            slider.addEventListener('touchend', () => isPaused = false);
+
+            // Start the engine!
+            scroll();
+        });
+    </script>
 
 </body>
 </html>

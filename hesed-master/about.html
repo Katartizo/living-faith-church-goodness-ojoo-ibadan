@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
+
     <meta charset="utf-8">
     <title>About - LFC Goodness Ojoo</title>
     <meta name="description" content="Living Faith Church Goodness, Ojoo, Ibadan">
@@ -34,7 +35,7 @@
             animation: flip3d 5s linear infinite; 
         }
 
-        /* --- NEW: Committee Scrolling Marquee Styles --- */
+        /* --- NEW: Smart Infinite Marquee Styles --- */
         .s-committee {
             padding: 6rem 0 4rem 0;
             background-color: #f9f9f9;
@@ -46,42 +47,42 @@
             margin-bottom: 2rem;
         }
 
-        .scrolling-wrapper {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 1rem 0 2rem 0;
+        /* The Draggable Container */
+        .committee-slider {
+            display: flex;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth native scrolling on mobile */
+            gap: 20px;
+            padding: 1rem 15px 2rem 15px;
+            /* Hide the ugly scrollbar */
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            cursor: grab;
         }
-
-        .scrolling-track {
-            display: inline-flex;
-            /* 25s controls the speed. Make it higher (e.g., 30s) to slow it down */
-            animation: scrollTrack 25s linear infinite; 
+        .committee-slider:active {
+            cursor: grabbing;
         }
-
-        /* Pauses the scroll when the user hovers over it */
-        .scrolling-track:hover {
-            animation-play-state: paused;
+        .committee-slider::-webkit-scrollbar {
+            display: none;
         }
 
         .committee-card {
+            flex: 0 0 280px; /* Makes sure cards stay a fixed width */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 260px;
-            margin: 0 15px;
             padding: 25px 15px;
             background: #ffffff;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.06);
             text-align: center;
-            white-space: normal; /* Allows text to wrap inside the box */
+            white-space: normal; 
             transition: transform 0.3s ease;
         }
 
         .committee-card:hover {
-            transform: translateY(-5px); /* Tiny lift effect on hover */
+            transform: translateY(-5px);
         }
 
         .committee-card img {
@@ -89,18 +90,18 @@
             height: 90px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: top center; /* Fixes faces being cut off! */
+            object-position: top center; 
             margin-bottom: 15px;
-            border: 3px solid #cc0000; /* Winners Red border around pictures */
+            border: 3px solid #cc0000; 
         }
 
         /* SPECIAL RULE FOR GROUP PHOTOS */
         .committee-card.group-card img {
-            width: 240px; /* Made even wider to fit everyone */
-            height: 140px; /* Made taller to fit faces properly */
-            border-radius: 8px; /* Smooth rounded corners instead of a circle */
+            width: 240px; 
+            height: 140px; 
+            border-radius: 8px; 
             object-fit: cover;
-            object-position: top center; /* Shifts focus up to the faces! */
+            object-position: top center; 
         }
 
         .committee-card h4 {
@@ -113,11 +114,6 @@
             color: #cc0000;
             font-size: 1.3rem;
             font-weight: 600;
-        }
-
-        @keyframes scrollTrack {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } 
         }
     </style>
     
@@ -409,78 +405,45 @@
             <div class="column large-full">
                 <h2 class="committee-title">
                     Church Committee Members
-                    <span style="font-size: 0.6em; color: #cc0000; margin-left: 10px; vertical-align: middle; opacity: 0.7;">
-                        ← →
-                    </span>
                 </h2>
+                <p style="text-align: center; margin-bottom: 2rem; opacity: 0.7; font-size: 1.2rem;">Swipe or drag to view more ➔</p>
             </div>
         </div>
 
-        <div class="scrolling-wrapper">
-            <div class="scrolling-track">
-                
-                <div class="committee-card">
-                    <img src="images/avatars/_QP10261.jpg" alt="Committee Member">
-                    <h4>Dns. Mrs. Ruth Adeola princess Bello</h4>
-                    <span>Deaconess</span>
-                </div>
-                
-                <div class="committee-card">
-                    <img src="images/avatars/IMG_20260413_094621.jpg" alt="Committee Member">
-                    <h4>Dns. Dr. Olukemi Esther Adeoye</h4>
-                    <span>Deaconess</span>
-                </div>
-
-                <div class="committee-card group-card">
-                    <img src="images/avatars/IMG_20260413_112527.jpg" alt="Committee Member">
-                    <h4>Youth Alive</h4>
-                    <span>Youth Alive Executives</span>
-                </div>
-
-                <div class="committee-card">
-                    <img src="images/avatars/IMG_20260416_203703.jpg" alt="Committee Member">
-                    <h4>Mr Okediji Moses</h4>
-                    <span>Technical Head</span>
-                </div>
-
-                <div class="committee-card">
-                    <img src="images/avatars/IMG_20260412_121159.jpg" alt="Committee Member">
-                    <h4>Mrs Olayiwola Blessing</h4>
-                    <span>Choir Director</span>
-                </div>
-
-                <div class="committee-card">
-                    <img src="images/avatars/_QP10261.jpg" alt="Committee Member">
-                    <h4>Dns. Mrs. Ruth Adeola princess Bello</h4>
-                    <span>Deaconess</span>
-                </div>
-                
-                <div class="committee-card">
-                    <img src="images/avatars/IMG_20260413_094621.jpg" alt="Committee Member">
-                    <h4>Dns. Dr. Olukemi Esther Adeoye</h4>
-                    <span>Deaconess</span>
-                </div>
-
-                <div class="committee-card group-card">
-                    <img src="images/avatars/IMG_20260413_112527.jpg" alt="Committee Member">
-                    <h4>Youth Alive</h4>
-                    <span>Youth Alive Executives</span>
-                </div>
-
-                <div class="committee-card">
-                    <img src="images/avatars/IMG_20260416_203703.jpg" alt="Committee Member">
-                    <h4>Mr Okediji Moses</h4>
-                    <span>Technical Head</span>
-                </div>
-
-                <div class="committee-card">
-                    <img src="images/avatars/IMG_20260412_121159.jpg" alt="Committee Member">
-                    <h4>Mrs. Olayiwola Blessing</h4>
-                    <span>Choir Director</span>
-                </div>
-
+        <div class="committee-slider" id="committeeSlider">
+            
+            <div class="committee-card">
+                <img src="images/avatars/_QP10261.jpg" alt="Committee Member">
+                <h4>Dns. Mrs. Ruth Adeola Princess Bello</h4>
+                <span>Deaconess</span>
             </div>
+            
+            <div class="committee-card">
+                <img src="images/avatars/IMG_20260413_094621.jpg" alt="Committee Member">
+                <h4>Dns. Dr. Olukemi Esther Adeoye</h4>
+                <span>Deaconess</span>
+            </div>
+
+            <div class="committee-card group-card">
+                <img src="images/avatars/IMG_20260413_112527.jpg" alt="Committee Member">
+                <h4>Youth Alive</h4>
+                <span>Youth Alive Executives</span>
+            </div>
+
+            <div class="committee-card">
+                <img src="images/avatars/IMG_20260416_203703.jpg" alt="Committee Member">
+                <h4>Mr Okediji Moses</h4>
+                <span>Technical Head</span>
+            </div>
+
+            <div class="committee-card">
+                <img src="images/avatars/IMG_20260412_121159.jpg" alt="Committee Member">
+                <h4>Mrs Olayiwola Blessing</h4>
+                <span>Choir Director</span>
+            </div>
+
         </div>
+
     </section>
     
     <section class="s-social">
@@ -501,7 +464,7 @@
                         </a>
                     </li>
                     <li class="social-list__item">
-                        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zp1t5bf" title="">
+                        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zp1t5bf" title="Instagram">
                             <span class="social-list__icon social-list__icon--instagram"></span>
                             <span class="social-list__text">Instagram</span>
                         </a>
@@ -582,6 +545,43 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('committeeSlider');
+            let isPaused = false;
+            let animationId;
+
+            // Clone the original cards to create a seamless infinite loop
+            const cards = Array.from(slider.children);
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                slider.appendChild(clone);
+            });
+
+            // The Smooth Continuous Scroll Engine
+            function scroll() {
+                if (!isPaused) {
+                    slider.scrollLeft += 1; // Increase this number to make it move faster
+                    
+                    // If we have scrolled past the first set of cards, reset to zero silently
+                    if (slider.scrollLeft >= slider.scrollWidth / 2) {
+                        slider.scrollLeft = 0;
+                    }
+                }
+                animationId = requestAnimationFrame(scroll);
+            }
+
+            // Pause the movement when the user interacts with it
+            slider.addEventListener('mouseenter', () => isPaused = true);
+            slider.addEventListener('mouseleave', () => isPaused = false);
+            slider.addEventListener('touchstart', () => isPaused = true, {passive: true});
+            slider.addEventListener('touchend', () => isPaused = false);
+
+            // Start the engine!
+            scroll();
+        });
+    </script>
 
 </body>
 </html>
