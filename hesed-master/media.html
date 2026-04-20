@@ -27,35 +27,16 @@
         }
         
         .spinning-logo {
-            animation: flip3d 3s linear infinite; 
-        }
-        
-        <style>
-        /* 3D Coin Flip Animation */
-        @keyframes flip3d {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
-        
-        .spinning-logo {
-            animation: flip3d 3s linear infinite; 
+            animation: flip3d 5s linear infinite; 
         }
 
-        /* Custom Header Image for THIS PAGE ONLY */
-        .s-header {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/header-bgs/media-header-bg-2000.jpg') !important;
+        /* THIS CREATES THE LARGE HERO BACKGROUND */
+        .page-header--media {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/header-bgs/media-header-bg-2000.jpg') !important;
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
-            padding-bottom: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
         }
-
-        /* Forces the mobile menu button to stay white */
-        .header-menu-toggle span, .header-menu-toggle text {
-            color: #ffffff !important;
-        }
-    </style>
     </style>
     
 </head>
@@ -86,7 +67,6 @@
                 <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
                 <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
                 <li class="current"><a href="media.html" title="Messages">Messages</a></li>
-                
                 <li><a href="contact.html" title="Contact us">Contact</a></li>
             </ul>
         </nav>
@@ -95,11 +75,18 @@
 
     </header> 
 
-    <section class="s-content" style="padding-top: 150px; padding-bottom: 100px; background-color: #f7f7f7;">
+    <section class="page-header page-header--media">
+        <div class="gradient-overlay"></div>
+        <div class="row page-header__content">
+            <div class="column">
+                <h1>Service Messages</h1>
+            </div>
+        </div>
+    </section> 
+
+    <section class="page-content" style="background-color: #f7f7f7; padding-top: 5rem; padding-bottom: 5rem;">
         <div class="row">
             <div class="column large-full">
-                <h2 class="subhead" style="text-align: center;">Watch & Listen</h2>
-                <h1 class="display-1" style="text-align: center; margin-bottom: 50px;">Service Messages</h1>
 
                 <div style="background-color: #1a1a1a; border-radius: 15px; padding: 20px; margin-bottom: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <h3 style="color: white; margin-bottom: 15px; text-align: center;">Latest Service Stream</h3>
@@ -121,16 +108,15 @@
 
                 <h2 style="text-align: center; margin-bottom: 40px;">Audio Downloads</h2>
                 
-                <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="row block-large-1-2 block-tab-full">
                     
-                    <div class="card" style="background: white; border-radius: 10px; text-align: center; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div class="column card" style="background: white; border-radius: 10px; text-align: center; padding: 30px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                         <h4 style="color: #cc0000; font-size: 1.2rem; margin-bottom: 10px;">Sun, 19th April 2026</h4>
                         <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Covenant Day of Vengeance</h3>
                         <p style="margin-bottom: 20px; font-size: 1.3rem;">Pastor Paul Bolarinwa</p>
 
                         <audio controls style="width: 100%; margin-bottom: 20px; border-radius: 30px;">
                             <source src="assets/audio/vengeance-service.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
                         </audio>
 
                         <a href="assets/audio/vengeance-service.mp3" download="Covenant_Day_Of_Vengeance.mp3" class="btn btn--primary" style="width: 100%; background-color: #cc0000; border-color: #cc0000;">
@@ -138,7 +124,7 @@
                         </a>
                     </div>
 
-                    <div class="card" style="background: white; border-radius: 10px; text-align: center; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div class="column card" style="background: white; border-radius: 10px; text-align: center; padding: 30px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                         <h4 style="color: #cc0000; font-size: 1.2rem; margin-bottom: 10px;">Sun, 12th April 2026</h4>
                         <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Unveiling Our Breakaway Heritage</h3>
                         <p style="margin-bottom: 20px; font-size: 1.3rem;">Pastor Paul Bolarinwa</p>
@@ -205,12 +191,10 @@
             <div class="column ss-copyright">
                 <span>© Copyright Living Faith Church Goodness Ojoo 2026</span> 
                 
-                <span style="margin-top: 15px; display: inline-block;">
-                    Developed by: <span style="color: #ffffff; font-weight: bold;">Victor
-                </span>
-                    
-                    <a href="https://victor-portfolio-weld.vercel.app/" style="background-color: #cc0000; color: #ffffff; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold; margin-left: 8px; display: inline-block;">Click Here To View My Work ➔</a>
-                </span>
+                <div style="margin-top: 15px;">
+                    <span>Developed by: <span style="color: #ffffff; font-weight: bold;">Victor</span></span><br>
+                    <a href="https://victor-portfolio-weld.vercel.app/" style="background-color: #cc0000; color: #ffffff; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Click Here To View My Work ➔</a>
+                </div>
                 
             </div>
         </div> 
