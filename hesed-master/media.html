@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages - LFC Goodness Ojoo</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="section" style="padding-top: 100px;">
+        <div class="container">
+          <h2 class="section-title" data-title="Watch & Listen">Service Messages</h2>
+
+          <div style="background-color: #1a1a1a; border-radius: 15px; padding: 20px; margin-bottom: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h3 style="color: white; margin-bottom: 15px; text-align: center;">Latest Service Stream</h3>
+            
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+              <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                      src="https://www.youtube.com/embed/LIVE_STREAM_ID" 
+                      frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+                <a href="#" class="btn" style="background-color: red;">Live Stream</a>
+                <a href="#" class="btn" style="background-color: transparent; border: 1px solid red; color: red;">Previous Videos</a>
+            </div>
+          </div>
+
+          <hr style="border: 1px solid #eee; margin-bottom: 50px;">
+
+          <h2 style="text-align: center; margin-bottom: 30px;">Audio Downloads</h2>
+          
+          <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <div class="card" style="text-align: center; padding: 30px;">
+              <h4 style="color: var(--first-color); margin-bottom: 10px;">Sun, 19th April 2026</h4>
+              <h3 style="margin-bottom: 5px;">Covenant Day of Vengeance</h3>
+              <p style="margin-bottom: 20px; font-size: 0.9rem;">Pastor Paul Bolarinwa</p>
+
+              <audio controls style="width: 100%; margin-bottom: 20px; border-radius: 30px;">
+                <source src="assets/audio/vengeance-service.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+
+              <a href="assets/audio/vengeance-service.mp3" download="Covenant_Day_Of_Vengeance.mp3" class="btn" style="width: 100%;">
+                Download MP3 <i class="ri-download-cloud-2-line"></i>
+              </a>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 30px;">
+              <h4 style="color: var(--first-color); margin-bottom: 10px;">Sun, 12th April 2026</h4>
+              <h3 style="margin-bottom: 5px;">Unveiling Our Breakaway Heritage</h3>
+              <p style="margin-bottom: 20px; font-size: 0.9rem;">Pastor Paul Bolarinwa</p>
+
+              <audio controls style="width: 100%; margin-bottom: 20px; border-radius: 30px;">
+                <source src="assets/audio/breakaway-heritage.mp3" type="audio/mpeg">
+              </audio>
+
+              <a href="assets/audio/breakaway-heritage.mp3" download="Breakaway_Heritage.mp3" class="btn" style="width: 100%;">
+                Download MP3 <i class="ri-download-cloud-2-line"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
