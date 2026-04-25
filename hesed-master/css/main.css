@@ -2875,17 +2875,8 @@ html.no-csstransitions .hero-content {
   text-shadow: none;
   color: transparent;
 }
-
-.series-content__subscribe-links .ss-apple-podcast a {
-  background-image: url(../images/icons/podcast/icon-podcast.svg);
-}
-
-.series-content__subscribe-links .ss-spotify a {
-  background-image: url(../images/icons/podcast/icon-spotify.svg);
-}
-
-.series-content__subscribe-links .ss-soundcloud a {
-  background-image: url(../images/icons/podcast/icon-soundcloud.svg);
+.series-content__subscribe-links .ss-domiradio a {
+  background-image: url(../images/icons/podcast/icon-domiradio.svg);
 }
 
 .series-content__subscribe-links .ss-youtube a {
