@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-
     <meta charset="utf-8">
     <title>Event Details - LFC Goodness Ojoo</title>
     <meta name="description" content="Living Faith Church Goodness, Ojoo, Ibadan">
@@ -36,12 +35,22 @@
         }
         
         /* REMOVE THE LINE BESIDE THE TOP LOGO */
-.header-logo::before {
-    display: none !important;
-}
-        
-    </style>
+        .header-logo::before {
+            display: none !important;
+        }
 
+        /* Carousel Styles */
+        .carousel-slide { display: none; width: 100%; }
+        .carousel-slide.active { display: block; }
+        .carousel-slide img { width: 100%; height: auto; display: block; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 12px 18px; cursor: pointer; font-size: 18px; z-index: 10; border-radius: 4px; }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+        .carousel-btn:hover { background: rgba(0, 0, 0, 0.8); }
+        .carousel-dots { position: absolute; bottom: 12px; width: 100%; text-align: center; }
+        .dot { display: inline-block; width: 10px; height: 10px; margin: 0 5px; background: rgba(255, 255, 255, 0.6); border-radius: 50%; cursor: pointer; transition: background 0.3s; }
+        .dot.active { background: white; }
+    </style>
 </head>
 
 <body id="top">
@@ -54,249 +63,142 @@
         </div>
     </div>
 
-
     <header class="s-header">
-
         <div class="header-logo">
             <a class="site-logo" href="index.html">
                 <img src="https://living-faith-church-goodness-ojoo-i.vercel.app/images/lfc-logo.jpg" alt="Living Faith Church Logo" class="spinning-logo" style="height: 55px; width: auto; max-width: 100%; display: block; margin-top: -15px; margin-left: -15px; border-radius: 50%;">
             </a>
         </div>
 
-       <nav class="header-nav-wrap">
-    <ul class="header-nav">
-        <li class="current"><a href="index.html" title="Home">Home</a></li>
-        <li><a href="about.html" title="About">About</a></li>
-        <li><a href="events.html" style="color: #cc0000; font-weight: bold;" title="Services">Events</a></li>
-        <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
-        <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
-        <li><a href="media.html" title="Messages">Messages</a></li>
-        <li><a href="contact.html" title="Contact us">Contact</a></li>
-        <li><a href="give.html" title="Give Online">Give</a></li>
-    </ul>
-</nav>
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="about.html" title="About">About</a></li>
+                <li class="current"><a href="events.html" style="color: #cc0000; font-weight: bold;" title="Services">Events</a></li>
+                <li><a href="connect-group.html" title="WSF Centers">WSF</a></li>
+                <li><a href="volunteer.html" title="Service Units">Service Units</a></li>
+                <li><a href="media.html" title="Messages">Messages</a></li>
+                <li><a href="contact.html" title="Contact us">Contact</a></li>
+                <li><a href="give.html" title="Give Online">Give</a></li>
+            </ul>
+        </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
     </header> 
     
     <section class="page-header page-header--events">
-
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
             <div class="column">
                 <h1>Event Details</h1>
             </div>
         </div>
-
     </section> 
     
     <section class="page-content">
-
         <div class="row">
             <div class="column">
-
                 <div class="media-wrap event-thumb">
-    <div class="carousel-container" style="position: relative; overflow: hidden; width: 100%;">
-        
-        <!-- Slides -->
-        <div class="carousel-slide active">
-    <img src="images/thumbs/events/SAVE_20260501_172837.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
-</div>
+                    <div class="carousel-container" style="position: relative; overflow: hidden; width: 100%;">
+                        
+                        <!-- Slides -->
+                        <div class="carousel-slide active">
+                            <img src="images/thumbs/events/SAVE_20260501_172837.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG-20260501-WA0016.jpg" alt="Special Anniversary Thanksgiving - Slide 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG-20260501-WA0001.jpg" alt="Special Anniversary Thanksgiving - Slide 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG_20260426_085919.jpg" alt="Special Anniversary Thanksgiving - Slide 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG_20260426_090407.jpg" alt="Special Anniversary Thanksgiving - Slide 5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG_20260426_090445.jpg" alt="Special Anniversary Thanksgiving - Slide 6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG_20260426_103523.jpg" alt="Special Anniversary Thanksgiving - Slide 7">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/thumbs/events/IMG_20260426_103714.jpg" alt="Special Anniversary Thanksgiving - Slide 8">
+                        </div>
+                        
+                        <!-- Controls -->
+                        <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+                        
+                        <!-- Dots -->
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
+                            <span class="dot" onclick="goToSlide(3)"></span>
+                            <span class="dot" onclick="goToSlide(4)"></span>
+                            <span class="dot" onclick="goToSlide(5)"></span>
+                            <span class="dot" onclick="goToSlide(6)"></span>
+                            <span class="dot" onclick="goToSlide(7)"></span>
+                        </div>
+                        
+                    </div>
+                </div>
 
-<div class="carousel-slide active">
-    <img src="images/thumbs/events/IMG-20260501-WA0016.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
-</div>
-
- <div class="carousel-slide active">
-            <img src="images/thumbs/events/IMG-20260501-WA0001.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
-        </div>
-        
-        <div class="carousel-slide active">
-            <img src="images/thumbs/events/IMG_20260426_085919.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
-        </div>
-        
-        <div class="carousel-slide">
-            <img src="images/thumbs/events/IMG_20260426_090407.jpg" alt="Special Anniversary Thanksgiving - Slide 2">
-        </div>
-        
-        <div class="carousel-slide">
-            <img src="images/thumbs/events/IMG_20260426_090445.jpg" alt="Special Anniversary Thanksgiving - Slide 3">
-        </div>
-        
-        <div class="carousel-slide">
-            <img src="images/thumbs/events/IMG_20260426_103523.jpg" alt="Special Anniversary Thanksgiving - Slide 4">
-        </div>
-        
-        <div class="carousel-slide">
-            <img src="images/thumbs/events/IMG_20260426_103714.jpg" alt="Special Anniversary Thanksgiving - Slide 5">
-        </div>
-        
-        <!-- Controls -->
-        <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
-        
-        <!-- Dots -->
-        <div class="carousel-dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
-            <span class="dot" onclick="goToSlide(4)"></span>
-        </div>
-        
-    </div>
-</div>
-
-
-<style>
-    .carousel-slide {
-        display: none;
-        width: 100%;
-    }
-    
-    .carousel-slide.active {
-        display: block;
-    }
-    
-    .carousel-slide img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 12px 18px;
-        cursor: pointer;
-        font-size: 18px;
-        z-index: 10;
-        border-radius: 4px;
-    }
-    
-    .carousel-btn.prev {
-        left: 10px;
-    }
-    
-    .carousel-btn.next {
-        right: 10px;
-    }
-    
-    .carousel-btn:hover {
-        background: rgba(0, 0, 0, 0.8);
-    }
-    
-    .carousel-dots {
-        position: absolute;
-        bottom: 12px;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .dot {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 0 5px;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-    
-    .dot.active {
-        background: white;
-    }
-</style>
-
-
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    let autoPlay = setInterval(() => changeSlide(1), 4000);
-    
-    function showSlide(index) {
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        currentSlide = (index + slides.length) % slides.length;
-        slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
-    }
-    
-    function changeSlide(direction) {
-        showSlide(currentSlide + direction);
-    }
-    
-    function goToSlide(index) {
-        clearInterval(autoPlay);
-        showSlide(index);
-        autoPlay = setInterval(() => changeSlide(1), 4000);
-    }
-</script>
-                
                 <div class="event-content">
-
                     <div class="event-title">
                         <h2 class="display-1">Liberation Anniversary Thanksgiving Service</h2>
                     </div>
-                   <p>
-    Join us this Sunday for a momentous celebration as we mark a special milestone
-    in God's faithfulness at our <strong>Liberation Anniversary Thanksgiving Service</strong>.
-    The Bible declares in Psalm 118:15, <em>"The voice of rejoicing and salvation is
-        in the tabernacles of the righteous."</em> This Sunday, we pause to honour the
-    journey God has brought us through — every step, every season, and every story
-    of His grace that has carried us to this anniversary.
-</p>
+                    <p>
+                        Join us this Sunday for a momentous celebration as we mark a special milestone
+                        in God's faithfulness at our <strong>Liberation Anniversary Thanksgiving Service</strong>.
+                        The Bible declares in Psalm 118:15, <em>"The voice of rejoicing and salvation is
+                        in the tabernacles of the righteous."</em> This Sunday, we pause to honour the
+                        journey God has brought us through — every step, every season, and every story
+                        of His grace that has carried us to this anniversary.
+                    </p>
 
-<p>
-    Come ready to reflect, rejoice, and give thanks. Because it is our
-    <strong>Liberation Anniversary Thanksgiving Service</strong>, make sure you come
-    <strong>dressed in your finest</strong> and with a heart overflowing with gratitude!
-    We will be lifting up a collective offering of praise to God for His unwavering
-    faithfulness, His covering over our lives, and the legacy of grace He continues
-    to write through this commission. Come along with your entire family, your friends,
-    and your loved ones. This anniversary belongs to all of us — let us celebrate it
-    together in glory!
-</p>
+                    <p>
+                        Come ready to reflect, rejoice, and give thanks. Because it is our
+                        <strong>Liberation Anniversary Thanksgiving Service</strong>, make sure you come
+                        <strong>dressed in your finest</strong> and with a heart overflowing with gratitude!
+                        We will be lifting up a collective offering of praise to God for His unwavering
+                        faithfulness, His covering over our lives, and the legacy of grace He continues
+                        to write through this commission. Come along with your entire family, your friends,
+                        and your loved ones. This anniversary belongs to all of us — let us celebrate it
+                        together in glory!
+                    </p>
 
                     <ul class="event-meta">
                         <li><strong>Who</strong>Open to everyone</li>
-                        <li><strong>Date</strong>Sunday, April 26, 2026</li>
-                        <li><strong>Time</strong>Turnaround Service - 8:00 AM - 10:00 AM</li>
+                        <li><strong>Date</strong>Sunday, May 3, 2026</li>
+                        <li><strong>Time</strong>Thanksgiving Service - 8:00 AM - 10:00 AM</li>
                         <li><strong>Place</strong>LFC Goodness Auditorium, Ojoo, Ibadan</li>
                     </ul>
 
                 </div> 
             </div>
         </div>
-
     </section> 
     
     <section class="s-social">
-            
         <div class="row social-content">
             <div class="column">
                 <ul class="social-list">
-                    <ul class="social-list">
-    <li class="social-list__item">
-        <a href="https://www.facebook.com/share/1CgyN62otw/" title=""><span class="social-list__icon social-list__icon--facebook"></span><span class="social-list__text">Facebook</span></a>
-    </li>
-                   <li class="social-list__item">
-    <a href="https://youtube.com/@lfcgoodnessojooibadan?si=tWfPdxVKLjvEg4Ex" title="YouTube">
-        <span class="social-list__icon">
-            <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" xml:space="preserve">
-                <path fill="#FFFFFF" d="M21.582,6.186a2.506,2.506,0,0,0-1.762-1.766C18.265,4,12,4,12,4S5.736,4,4.18,4.42A2.505,2.505,0,0,0,2.418,6.186C2,7.742,2,12,2,12s0,4.258,0.418,5.814a2.506,2.506,0,0,0,1.762,1.766C5.736,20,12,20,12,20s6.265,0,7.82-0.42a2.506,2.506,0,0,0,1.762-1.766C22,16.258,22,12,22,12S22,7.742,21.582,6.186z M10,15V9l5.2,3L10,15z" />
-            </svg>
-        </span>
-        <span class="social-list__text">YouTube</span>
-    </a>
-</li>
+                    <li class="social-list__item">
+                        <a href="https://www.facebook.com/share/1CgyN62otw/" title=""><span class="social-list__icon social-list__icon--facebook"></span><span class="social-list__text">Facebook</span></a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="https://youtube.com/@lfcgoodnessojooibadan?si=tWfPdxVKLjvEg4Ex" title="YouTube">
+                            <span class="social-list__icon">
+                                <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" xml:space="preserve">
+                                    <path fill="#FFFFFF" d="M21.582,6.186a2.506,2.506,0,0,0-1.762-1.766C18.265,4,12,4,12,4S5.736,4,4.18,4.42A2.505,2.505,0,0,0,2.418,6.186C2,7.742,2,12,2,12s0,4.258,0.418,5.814a2.506,2.506,0,0,0,1.762,1.766C5.736,20,12,20,12,20s6.265,0,7.82-0.42a2.506,2.506,0,0,0,1.762-1.766C22,16.258,22,12,22,12S22,7.742,21.582,6.186z M10,15V9l5.2,3L10,15z" />
+                                </svg>
+                            </span>
+                            <span class="social-list__text">YouTube</span>
+                        </a>
+                    </li>
                     <li class="social-list__item">
                         <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zp1t5bfema" title="">
                             <span class="social-list__icon social-list__icon--instagram"></span>
@@ -304,10 +206,10 @@
                         </a>
                     </li>
                     <li class="social-list__item">
-                       <a href="mailto:lfcgoodness@gmail.com" title="Email Us">
-    <span class="social-list__icon social-list__icon--email"></span>
-    <span class="social-list__text">Email</span>
-</a>
+                        <a href="mailto:lfcgoodness@gmail.com" title="Email Us">
+                            <span class="social-list__icon social-list__icon--email"></span>
+                            <span class="social-list__text">Email</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -315,7 +217,6 @@
     </section> 
     
     <footer class="s-footer">
-
         <div class="row footer-top">
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
@@ -332,13 +233,12 @@
                     <div class="column large-7 medium-full">
                         <h4 class="h6">Our Location</h4>
                         <p>
-    No. 11 Goodness Estate, Zone C, Road 5,<br>
-    Ajoro Arulogun Road, Ojoo,<br>
-    Ibadan, Oyo State, Nigeria.
-</p>
-        
+                            No. 11 Goodness Estate, Zone C, Road 5,<br>
+                            Ajoro Arulogun Road, Ojoo,<br>
+                            Ibadan, Oyo State, Nigeria.
+                        </p>
                         <p>
-                        <a href="https://goo.gl/maps/96kzyeS4fKdtgiqMA?g_st=awb" target="_blank" class="btn btn--footer">Get Directions</a>
+                            <a href="https://goo.gl/maps/96kzyeS4fKdtgiqMA?g_st=awb" target="_blank" class="btn btn--footer">Get Directions</a>
                         </p>
                     </div>
                     <div class="column large-5 medium-full">
@@ -358,15 +258,13 @@
         </div> 
         
         <div class="row footer-bottom">
-    <div class="column ss-copyright">
-        <span>© Copyright Living Faith Church Goodness Estate, Ojoo Ibadan 2026.</span>
-        
-        <div style="margin-top: 10px; margin-bottom: -70px; font-size: 0.8rem; opacity: 0.5;">
-            Developed by <a href="https://victor-portfolio-weld.vercel.app/" target="_blank" style="color: #ffffff; text-decoration: none; border-bottom: 1px dotted #ffffff;">Victor</a>
-        </div>
-        
-    </div>
-</div> 
+            <div class="column ss-copyright">
+                <span>© Copyright Living Faith Church Goodness Estate, Ojoo Ibadan 2026.</span>
+                <div style="margin-top: 10px; margin-bottom: -70px; font-size: 0.8rem; opacity: 0.5;">
+                    Developed by <a href="https://victor-portfolio-weld.vercel.app/" target="_blank" style="color: #ffffff; text-decoration: none; border-bottom: 1px dotted #ffffff;">Victor</a>
+                </div>
+            </div>
+        </div> 
         
         <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
@@ -378,6 +276,32 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Carousel Script -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        let autoPlay = setInterval(() => changeSlide(1), 4000);
+        
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+        
+        function goToSlide(index) {
+            clearInterval(autoPlay);
+            showSlide(index);
+            autoPlay = setInterval(() => changeSlide(1), 4000);
+        }
+    </script>
 
 </body>
 </html>
