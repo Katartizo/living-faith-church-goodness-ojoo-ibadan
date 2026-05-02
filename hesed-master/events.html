@@ -163,8 +163,158 @@
             </div>
         </div>
         
+        <section class="page-content">
+    
+    <div class="row">
+        <div class="column">
+            
+            <div class="media-wrap event-thumb">
+                <div class="carousel-container" style="position: relative; overflow: hidden; width: 100%;">
+                    
+                    <!-- Slides -->
+                    <div class="carousel-slide active">
+                        <img src="images/thumbs/events/SAVE_20260501_172837.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
+                    </div>
+                    
+                    <div class="carousel-slide active">
+                        <img src="images/thumbs/events/IMG-20260501-WA0016.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
+                    </div>
+                    
+                    <div class="carousel-slide active">
+                        <img src="images/thumbs/events/IMG-20260501-WA0001.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
+                    </div>
+                    
+                    <div class="carousel-slide active">
+                        <img src="images/thumbs/events/IMG_20260426_085919.jpg" alt="Special Anniversary Thanksgiving - Slide 1">
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="images/thumbs/events/IMG_20260426_090407.jpg" alt="Special Anniversary Thanksgiving - Slide 2">
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="images/thumbs/events/IMG_20260426_090445.jpg" alt="Special Anniversary Thanksgiving - Slide 3">
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="images/thumbs/events/IMG_20260426_103523.jpg" alt="Special Anniversary Thanksgiving - Slide 4">
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="images/thumbs/events/IMG_20260426_103714.jpg" alt="Special Anniversary Thanksgiving - Slide 5">
+                    </div>
+                    
+                    <!-- Controls -->
+                    <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+                    
+                    <!-- Dots -->
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToSlide(0)"></span>
+                        <span class="dot" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                        <span class="dot" onclick="goToSlide(3)"></span>
+                        <span class="dot" onclick="goToSlide(4)"></span>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            <style>
+                .carousel-slide {
+                    display: none;
+                    width: 100%;
+                }
+                
+                .carousel-slide.active {
+                    display: block;
+                }
+                
+                .carousel-slide img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                
+                .carousel-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    padding: 12px 18px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    z-index: 10;
+                    border-radius: 4px;
+                }
+                
+                .carousel-btn.prev {
+                    left: 10px;
+                }
+                
+                .carousel-btn.next {
+                    right: 10px;
+                }
+                
+                .carousel-btn:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+                
+                .carousel-dots {
+                    position: absolute;
+                    bottom: 12px;
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                .dot {
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 5px;
+                    background: rgba(255, 255, 255, 0.6);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                }
+                
+                .dot.active {
+                    background: white;
+                }
+            </style>
+            
+            
+            <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.carousel-slide');
+                const dots = document.querySelectorAll('.dot');
+                let autoPlay = setInterval(() => changeSlide(1), 4000);
+                
+                function showSlide(index) {
+                    slides.forEach(s => s.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+                    currentSlide = (index + slides.length) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                    dots[currentSlide].classList.add('active');
+                }
+                
+                function changeSlide(direction) {
+                    showSlide(currentSlide + direction);
+                }
+                
+                function goToSlide(index) {
+                    clearInterval(autoPlay);
+                    showSlide(index);
+                    autoPlay = setInterval(() => changeSlide(1), 4000);
+                }
+            </script>
+        
+        
         <div class="row">
-            <div class="column large-full" style="text-align: center; margin-bottom: 5rem;">
+            <div class="column large-full" style="text-align: center; margin-bottom: 5rem; margin-top: 7rem;">
                 <h2 class="display-1">Our Monthly Encounters</h2>
                 <p>One Service. One Encounter. Join us every Sunday at 8:00 AM.</p>
             </div>
